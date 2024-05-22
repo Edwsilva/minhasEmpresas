@@ -1,0 +1,130 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    width: 20%;
+    height: 350px;
+    margin: 0 auto;
+  }
+  
+  .cardTitle {
+    font-size: 1.5rem;
+  }
+  
+  .cardIcon {
+    height: 60%;
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--secondaryLight);
+  }
+  
+  .primary {
+    background-color: var(--primary);
+  }
+  
+  .primaryLight{
+      background-color: var(--primaryLight);
+  }
+  
+  .pink{
+      background-color: #ec9992;
+  }
+  
+  .cardContent {
+    font-size: 0.9rem;
+  }
+  
+  .outerDiv {
+    background-color: #2326e9;
+    width: 20%; /* Faz o contêiner externo ocupar 100% da largura disponível */
+    display: flex; /* Define o contêiner externo como flexbox para centralizar o conteúdo */
+    height: 20%; /* Faz o contêiner externo ocupar a altura total da tela */
+    flex-direction: column;
+    border: 1px solid rgb(92, 88, 88); 
+    max-width: 1366px;
+    margin: auto;
+  }
+  
+  .direction {
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    /* background-color: red; */
+  }
+  .innerDiv {
+    width: 100%;
+    display: flex;
+    align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
+    color: white; /* Define a cor do texto */
+    padding: 20px; /* Adiciona algum espaçamento interno */
+   
+  }
+  
+  .textContainer {
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: center; /* Centraliza os itens verticalmente */
+    
+  }
+
+  .text {
+    margin: 0 10px 0 0; /* Adiciona espaçamento entre os textos e o ícone */
+  }
+  
+  .icon {
+    margin-left: auto; /* Empurra o ícone para a extremidade direita */
+  }
+
+  .additionalText {
+    margin: 10px 0; /* Adiciona espaçamento acima e abaixo do parágrafo adicional */
+  }
+  
+  .adicional {
+    width: 100%;
+    /* background-color: #dee4eb; */
+    display: flex;
+    flex-direction: column; /* Organiza os itens verticalmente */
+    justify-content: space-around;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-bottom: 15px;
+    
+  }
+
+  .buttonContainer {
+    display: flex;
+    /* flex-direction: column; */
+   justify-content: space-between;
+    /* margin-bottom: 15px; */
+    gap: 20px;
+  }
+  .button {
+    padding: 10px 20px; /* Adiciona espaçamento interno aos botões */
+    border: none; /* Remove a borda padrão */
+    background-color: #007BFF; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto dos botões */
+    cursor: pointer; /* Adiciona um cursor pointer */
+  }
+  
+  .button:hover {
+    background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
+  }
+
+
+  @media screen and (max-width: 768px) {
+    .cardContainer {
+      flex-direction: column;
+      margin: 0 auto;
+    }
+  
+    .card {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 400px;
+      height: 350px;
+      margin: 10px 0;
+    }
+  }
+  

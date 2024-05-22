@@ -1,0 +1,129 @@
+.mainBanner {
+  margin-top: 130px;
+  flex: 1;
+  justify-content: flex-start
+}
+.bannerTitle {
+  margin-bottom: 10px;
+}
+.bannerText {
+  margin-bottom: 10px;
+}
+.servico { 
+  text-align: center;
+  padding-top: 50px;
+}
+
+.mainWrapper{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 100%;
+  /* max-width: 80%; */
+  text-align: center;
+  margin: auto;
+  max-width: 1366px;
+  display: flex;
+ /* justify-content: flex-start; */
+ margin: 0 auto;
+ gap: 10px;
+}
+.text {
+  font-size: 1em;
+  line-height: 1.6em;
+  color: var(--textDark);
+  letter-spacing: 1px;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+
+.bannerContent {
+  width: 100%;
+  color: #09B78B;
+  font-size: 2.5rem;
+  /* flex-direction: row; */
+  /* display: flex; */
+  /* align-content: center; */
+}
+
+.icon {
+  /* display: flex; */
+  font-size: 2.5rem;
+  color: #1bc5a0;
+  align-items: center;
+}
+.arrowIcon {
+  display: flex;
+  align-items: center; /* Centraliza verticalmente o ícone dentro da coluna */
+  justify-content: center; /* Centraliza horizontalmente o ícone dentro da coluna */
+  height: 100%; /* Faz o ícone ocupar a altura total da célula da grade */
+  font-size: 2.5rem;
+  color: #D8DADA;
+}
+.mainContainer {
+  text-align: center;
+  margin: auto;
+  max-width: 1366px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de largura igual */
+  gap: 20px; /* Espaçamento entre os modelos */
+  padding: 0px; /* Adiciona algum espaçamento interno */
+  margin-bottom: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Define duas colunas: a primeira ocupa o espaço restante, a segunda ajusta-se ao conteúdo */
+  align-items: flex-start; /* Alinha os itens verticalmente ao centro */
+  gap: 10px; /* Espaçamento entre as colunas */
+  /* background-color: #f0f0f0;  Cor de fundo para melhor visualização  */
+  /* border: 1px solid #ddd;  Bordas para melhor visualização  */
+  border-radius: 8px; /* Bordas arredondadas para melhor visualização */
+  padding: 20px; /* Adiciona algum espaçamento interno */
+}
+
+.content {
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+  align-items: center; /* Centraliza os itens horizontalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.image {
+  /* Estilos específicos para a imagem, se necessário */
+}
+
+.text {
+  margin-top: 10px; /* Adiciona espaçamento vertical entre a imagem e o texto */
+}
+
+.icon {
+  /* Estilos específicos para o ícone, se necessário */
+}
+
+
+/* Responsividade */
+@media (max-width: 1200px) {
+  .mainContainer {
+    grid-template-columns: 1fr 1fr; /* Duas colunas para telas médias */
+    gap: 15px; /* Ajusta o espaçamento */
+  }
+}
+
+@media (max-width: 768px) {
+  .mainContainer {
+    grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
+    gap: 10px; /* Ajusta o espaçamento */
+  }
+
+  .container {
+    grid-template-columns: 1fr; /* Coloca os elementos em uma única coluna */
+    text-align: center; /* Centraliza o texto */
+    padding-bottom: 0px;
+    gap: 0px;
+  }
+
+  .arrowIcon  {
+    display: none;
+    height: 0px;
+  }
+}
