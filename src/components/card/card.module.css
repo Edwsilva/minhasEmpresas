@@ -1,64 +1,23 @@
-.card {
-    display: flex;
-    flex-direction: column;
-    width: 20%;
-    height: 350px;
-    margin: 0 auto;
-  }
-  
-  .cardTitle {
-    font-size: 1.5rem;
-  }
-  
-  .cardIcon {
-    height: 60%;
-    margin: 15px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: var(--secondaryLight);
-  }
-  
-  .primary {
-    background-color: var(--primary);
-  }
-  
-  .primaryLight{
-      background-color: var(--primaryLight);
-  }
-  
-  .pink{
-      background-color: #ec9992;
-  }
-  
-  .cardContent {
-    font-size: 0.9rem;
-  }
-  
-  .outerDiv {
-    background-color: #2326e9;
-    width: 20%; /* Faz o contêiner externo ocupar 100% da largura disponível */
-    display: flex; /* Define o contêiner externo como flexbox para centralizar o conteúdo */
-    height: 20%; /* Faz o contêiner externo ocupar a altura total da tela */
-    flex-direction: column;
-    border: 1px solid rgb(92, 88, 88); 
-    max-width: 1366px;
-    margin: auto;
-  }
-  
+
   .direction {
-    padding: 20px;
+    border: 1px solid #ddd; /* Exemplo de borda */
+    padding: 20px; /* Exemplo de padding */
+    border-radius: 8px; /* Exemplo de bordas arredondadas */
+    background-color: #fff; /* Exemplo de cor de fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
+    /* padding: 20px;
+    max-width: 1366px;
     display: flex;
     flex-direction: row;
-    /* background-color: red; */
+    background-color: red;
+    margin: auto; */
   }
+
   .innerDiv {
     width: 100%;
     display: flex;
     align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
-    color: white; /* Define a cor do texto */
     padding: 20px; /* Adiciona algum espaçamento interno */
-   
   }
   
   .textContainer {
@@ -79,18 +38,7 @@
   .additionalText {
     margin: 10px 0; /* Adiciona espaçamento acima e abaixo do parágrafo adicional */
   }
-  
-  .adicional {
-    width: 100%;
-    /* background-color: #dee4eb; */
-    display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente */
-    justify-content: space-around;
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-bottom: 15px;
-    
-  }
+
 
   .buttonContainer {
     display: flex;

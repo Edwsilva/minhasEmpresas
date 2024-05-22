@@ -13,51 +13,21 @@ type CardProps = {
 
 const Card = ({ children, titular, inscricao, bg }: CardProps) => {
   return (
-    // <div className={styles.card}>
-    //     <h3 className={styles.cardTitle}>{titular}</h3>
-    //     <h3 className={styles.cardTitle}>{inscricao}</h3>
-    //     <div className={`${styles.cardIcon} ${bg ? styles[bg] : ""}`}>
-    //         {children}
-    //     </div>
-    //     {/* <p className={styles.cardContent}>
-    //         {subtitle}
-    //     </p> */}
-    //     <Button text="Recusar" />
-
-    // </div>
     <div className={styles.direction}>
-      <div className={styles.outerDiv}>
-        <div className={styles.innerDiv}>
-          <div className={styles.textContainer}>
-            <p className={styles.text}>Texto 1</p>
-            <p className={styles.text}>Texto 2</p>
-          </div>
-          <IoMdInformationCircleOutline className={styles.icon} />
+      <div className={styles.innerDiv}>
+        <div className={styles.textContainer}>
+          <p className={styles.text}>{titular}</p>
+          <p className={styles.text}>{inscricao}</p>
         </div>
-        <div className={styles.adicional}>
-          <p className={styles.additionalText}>Texto adicional</p>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button}>Botão 1</button>
-            <button className={styles.button}>Botão 2</button>
-          </div>
-        </div>
+        <IoMdInformationCircleOutline className={styles.icon} />
       </div>
-      <div className={styles.outerDiv}>
-        <div className={styles.innerDiv}>
-          <div className={styles.textContainer}>
-            <p className={styles.text}>Texto 1</p>
-            <p className={styles.text}>Texto 2</p>
-          </div>
-          <IoMdInformationCircleOutline className={styles.icon} />
+     
+        <p className={styles.additionalText}>{children}</p>
+        <div className={styles.buttonContainer}>
+          <button className={styles.button}>Recusar</button>
+          <button className={styles.button}>Aceitar</button>
         </div>
-        <div className={styles.adicional}>
-          <p className={styles.additionalText}>Texto adicional</p>
-          <div className={styles.buttonContainer}>
-            <button className={styles.button}>Botão 1</button>
-            <button className={styles.button}>Botão 2</button>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };

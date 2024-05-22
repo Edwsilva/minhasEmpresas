@@ -1,0 +1,14 @@
+{
+    "empresas": [
+      { "id": "1", "empresa": "Empresa 1", "cnpj": "01.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa?", "status": 1 },
+      { "id": "2", "empresa": "Empresa 2", "cnpj": "02.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa?", "status": 2 },
+      { "id": "3", "empresa": "Empresa 3", "cnpj": "03.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa?", "status": 1 }
+    ],
+    "comments": [
+      { "id": "1", "text": "a comment about post 1", "postId": "1" },
+      { "id": "2", "text": "another comment about post 1", "postId": "1" }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }
