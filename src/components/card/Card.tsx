@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import styles from "./card.module.css";
 import Button from "../button/Button";
-import { GoArrowRight } from "react-icons/go";
+import { IoMdInformationCircleOutline } from "react-icons/io";
 
 type CardProps = {
   children: ReactNode;
@@ -32,7 +32,7 @@ const Card = ({ children, titular, inscricao, bg }: CardProps) => {
             <p className={styles.text}>Texto 1</p>
             <p className={styles.text}>Texto 2</p>
           </div>
-          <GoArrowRight className={styles.icon} />
+          <IoMdInformationCircleOutline className={styles.icon} />
         </div>
         <div className={styles.adicional}>
           <p className={styles.additionalText}>Texto adicional</p>
@@ -48,7 +48,7 @@ const Card = ({ children, titular, inscricao, bg }: CardProps) => {
             <p className={styles.text}>Texto 1</p>
             <p className={styles.text}>Texto 2</p>
           </div>
-          <GoArrowRight className={styles.icon} />
+          <IoMdInformationCircleOutline className={styles.icon} />
         </div>
         <div className={styles.adicional}>
           <p className={styles.additionalText}>Texto adicional</p>
