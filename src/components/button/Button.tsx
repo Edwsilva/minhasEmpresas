@@ -25,7 +25,7 @@ const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, 
         setIsHovered(false)
     };
 
-    const buttonBackgroundColor = isHovered ? "transparent" : backgroundColor; // Defina "novaCor" como a cor desejada quando o mouse passar sobre o botão
+    const buttonBackgroundColor = isHovered ? "transparent" : backgroundColor; 
     const buttonTextColor = isHovered ? textColor: 'var(--text)' ;
 
     return (

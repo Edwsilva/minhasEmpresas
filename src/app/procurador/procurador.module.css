@@ -5,6 +5,8 @@
 
 .container {
   max-width: 1366px;
+  /* flex: 1; */
+  flex-direction: row;
   margin: 0 auto;
   padding: 20px;
   display: grid;
