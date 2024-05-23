@@ -3,7 +3,7 @@ import { useState } from "react";
 import styles from "./links.module.css";
 import NavLink from "./Link/NavLink";
 
-const links = [
+export const links = [
   {
     title: "Home",
     path: "/",
