@@ -14,7 +14,7 @@ type NavLinkProps = {
 };
 
 const NavLink = ({ item }: NavLinkProps) => {
-  console.log(item)
+
   const pathName = usePathname();
 
   return (
