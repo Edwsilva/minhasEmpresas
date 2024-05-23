@@ -9,13 +9,13 @@ const Navbar = () => {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <Image className={styles.img} src={logo} alt="Logo" />
-        </Link>
-        <div className={styles.containerBody}>
-          <Links />
-          {/* <Login /> */}
+        <div className={styles.logoLink}>
+          <Link href="/" className={styles.logo}>
+            <Image className={styles.img} src={logo} alt="Logo" />
+          </Link>
         </div>
+        <Links />
+        {/* <Login /> */}
       </div>
     </header>
   );
