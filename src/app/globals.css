@@ -19,7 +19,6 @@
   --secondary: #09b78b;
   --secondaryLight: #84dbc5;
   --secondaryDark: #07926f;
-  --text: #b1b4b6;
   --textLight: #d8dada;
   --textLighter: #ececec;
   --textLighter2: #f2f1f1;
@@ -27,6 +26,8 @@
   --error: #E33636;
   --errorH: #b62b2b;
   --warn: #F6CC2C;
+  --reject: #ff0000
+
 }
 
 /* @media (prefers-color-scheme: dark) {

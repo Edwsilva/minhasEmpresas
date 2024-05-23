@@ -8,7 +8,7 @@
     font-weight: 500;
     border-radius: 5px;
   }
-  
+ 
   .hidden {
     display: none;
   }
@@ -26,13 +26,16 @@
   }
   
   .p10 {
-    padding: 9px;
+    padding: 20px;
+  }
+  .p5 {
+    padding: 8px 20px;
   }
   
   .button:hover {
     transition: 0.3s all ease;
     background-color: transparent;
-    color: var(--primary);
+    color: var(--primaty);
   }
   
   @media screen and (max-width: 480px) {
@@ -40,17 +43,13 @@
       padding: 9px;
       font-size: 0.9rem;
     }
-  
+    .button {
+      font-size: 0.9rem;
+      padding: 10px
+    }
     .buttonModal {
-      position: fixed;
-      padding: 5px;
-      border-radius: 50%;
-      transform: translate(-50%, -50%);
       top: 96.5%;
       left: 50%;
-      right: auto;
-      bottom: auto;
-      z-index: 999;
     }
   }
   

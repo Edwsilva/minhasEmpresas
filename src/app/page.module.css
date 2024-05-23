@@ -1,7 +1,7 @@
 .mainBanner {
   margin-top: 130px;
   flex: 1;
-  justify-content: flex-start
+  justify-content: flex-start;
 }
 .bannerTitle {
   margin-bottom: 10px;
@@ -9,12 +9,12 @@
 .bannerText {
   margin-bottom: 10px;
 }
-.servico { 
+.servico {
   text-align: center;
   padding-top: 50px;
 }
 
-.mainWrapper{
+.mainWrapper {
   padding-top: 10px;
   padding-bottom: 10px;
   height: 100%;
@@ -23,9 +23,8 @@
   margin: auto;
   max-width: 1366px;
   display: flex;
- /* justify-content: flex-start; */
- margin: 0 auto;
- gap: 10px;
+  margin: 0 auto;
+  gap: 10px;
 }
 .text {
   font-size: 1em;
@@ -38,7 +37,7 @@
 
 .bannerContent {
   width: 100%;
-  color: #09B78B;
+  color: #09b78b;
   font-size: 2.5rem;
   /* flex-direction: row; */
   /* display: flex; */
@@ -57,14 +56,17 @@
   justify-content: center; /* Centraliza horizontalmente o ícone dentro da coluna */
   height: 100%; /* Faz o ícone ocupar a altura total da célula da grade */
   font-size: 2.5rem;
-  color: #D8DADA;
+  color: #d8dada;
 }
 .mainContainer {
   text-align: center;
   margin: auto;
   max-width: 1366px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Cria três colunas de largura igual */
+  grid-template-columns: repeat(
+    3,
+    1fr
+  ); /* Cria três colunas de largura igual */
   gap: 20px; /* Espaçamento entre os modelos */
   padding: 0px; /* Adiciona algum espaçamento interno */
   margin-bottom: 20px;
@@ -100,7 +102,6 @@
   /* Estilos específicos para o ícone, se necessário */
 }
 
-
 /* Responsividade */
 @media (max-width: 1200px) {
   .mainContainer {
@@ -122,7 +123,7 @@
     gap: 0px;
   }
 
-  .arrowIcon  {
+  .arrowIcon {
     display: none;
     height: 0px;
   }

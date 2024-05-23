@@ -15,19 +15,24 @@ const Card = ({ children, titular, inscricao, bg }: CardProps) => {
   return (
     <div className={styles.direction}>
       <div className={styles.innerDiv}>
-        <div className={styles.textContainer}>
-          <p className={styles.text}>{titular}</p>
+        <div>
+          <p className={styles.textTitular}>{titular}</p>
           <p className={styles.text}>{inscricao}</p>
         </div>
         <IoMdInformationCircleOutline className={styles.icon} />
       </div>
-     
-        <p className={styles.additionalText}>{children}</p>
-        <div className={styles.buttonContainer}>
-          <button className={styles.button}>Recusar</button>
-          <button className={styles.button}>Aceitar</button>
-        </div>
-      
+
+      <p className={styles.additionalText}>{children}</p>
+      <div className={styles.buttonContainer}>
+        <Button
+          p
+          backgroundColor="var(--reject)"
+          textColor="var(--reject)"
+          border="1px solid var(--reject)"
+          text="Recusar"
+        />
+        <Button p textColor="var(--secondary)" text="Aceitar" />
+      </div>
     </div>
   );
 };

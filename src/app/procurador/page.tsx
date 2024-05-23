@@ -21,6 +21,21 @@ const Procurador = () => {
         <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
           Confirmar convite de procuração para empresa?
         </Card>
+        <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
+          Confirmar convite de procuração para empresa?
+        </Card>
+        <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
+          Confirmar convite de procuração para empresa?
+        </Card>
+        <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
+          Confirmar convite de procuração para empresa?
+        </Card>
+        <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
+          Confirmar convite de procuração para empresa?
+        </Card>
+        <Card inscricao="30.111.167/0001-10" titular="Nome da empresa">
+          Confirmar convite de procuração para empresa?
+        </Card>
       </div>
     </div>
   );

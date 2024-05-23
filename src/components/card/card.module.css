@@ -1,78 +1,67 @@
-
-  .direction {
-    border: 1px solid #ddd; /* Exemplo de borda */
-    padding: 20px; /* Exemplo de padding */
-    border-radius: 8px; /* Exemplo de bordas arredondadas */
-    background-color: #fff; /* Exemplo de cor de fundo */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
-    /* padding: 20px;
+.direction {
+  border: 1px solid #ddd; /* Exemplo de borda */
+  padding: 20px; /* Exemplo de padding */
+  border-radius: 8px; /* Exemplo de bordas arredondadas */
+  background-color: #fff; /* Exemplo de cor de fundo */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
+  /* padding: 20px;
     max-width: 1366px;
     display: flex;
     flex-direction: row;
     background-color: red;
     margin: auto; */
+}
+
+.innerDiv {
+  width: 100%;
+  display: flex;
+  align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
+  margin-bottom: 20px;
+}
+
+.textContainer {
+  display: flex;
+  flex-direction: column; /* Organiza os itens verticalmente */
+  justify-content: center; /* Centraliza os itens verticalmente */
+}
+
+.textTitular {
+  font-size: 1.1rem;
+  line-height: 1.6rem;
+  font-weight: 600;
+}
+.text {
+  font-size: 0.9rem;
+}
+
+.icon {
+  margin-left: auto; /* Empurra o ícone para a extremidade direita */
+  font-size: 1.5rem;
+}
+
+.additionalText {
+  margin: 10px 0; /* Adiciona espaçamento acima e abaixo do parágrafo adicional */
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  /* gap: 20px; */
+}
+
+@media screen and (max-width: 768px) {
+  .cardContainer {
+    flex-direction: column;
+    margin: 0 auto;
   }
 
-  .innerDiv {
+  .card {
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    display: flex;
-    align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
-    padding: 20px; /* Adiciona algum espaçamento interno */
+    max-width: 400px;
+    height: 350px;
+    margin: 10px 0;
   }
-  
-  .textContainer {
-    display: flex;
-    flex-direction: column; /* Organiza os itens verticalmente */
-    justify-content: center; /* Centraliza os itens verticalmente */
-    
-  }
-
-  .text {
-    margin: 0 10px 0 0; /* Adiciona espaçamento entre os textos e o ícone */
-  }
-  
-  .icon {
-    margin-left: auto; /* Empurra o ícone para a extremidade direita */
-  }
-
-  .additionalText {
-    margin: 10px 0; /* Adiciona espaçamento acima e abaixo do parágrafo adicional */
-  }
-
-
-  .buttonContainer {
-    display: flex;
-    /* flex-direction: column; */
-   justify-content: space-between;
-    /* margin-bottom: 15px; */
-    gap: 20px;
-  }
-  .button {
-    padding: 10px 20px; /* Adiciona espaçamento interno aos botões */
-    border: none; /* Remove a borda padrão */
-    background-color: #007BFF; /* Cor de fundo dos botões */
-    color: white; /* Cor do texto dos botões */
-    cursor: pointer; /* Adiciona um cursor pointer */
-  }
-  
-  .button:hover {
-    background-color: #0056b3; /* Cor de fundo dos botões ao passar o mouse */
-  }
-
-
-  @media screen and (max-width: 768px) {
-    .cardContainer {
-      flex-direction: column;
-      margin: 0 auto;
-    }
-  
-    .card {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-      max-width: 400px;
-      height: 350px;
-      margin: 10px 0;
-    }
-  }
-  
+}

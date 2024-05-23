@@ -21,7 +21,7 @@ const Home = () => {
         <h1 className={styles.bannerTitle}>Minhas Empresas</h1>
         <p className={styles.bannerText}>Mantenha o controle da sua empresa</p>
         <Link href="/empresas">
-          <Button text="Cadastre sua Empresa" />
+          <Button textColor='var(--secondary)' text="Cadastre sua Empresa" />
         </Link>
       </Banner>
       <div className={styles.servico}>
