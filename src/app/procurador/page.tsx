@@ -44,11 +44,11 @@ const Procurador = () => {
       <Banner type="overlaySM" banner="bannerProcurador">
         <h1>Minhas Procurações</h1>
       </Banner>
-
+      {/* <h1>Minhas procurações</h1> */}
       {procuracoesPendentes.length > 0 && (
         <div>
           <div className={styles.container}>
-            <p>Pendentes: {`(${procuracoesPendentes.length})`}</p>
+            <p className={styles.title}>Pendentes: {`(${procuracoesPendentes.length})`}</p>
           </div>
 
           <div className={styles.container}>
@@ -68,7 +68,7 @@ const Procurador = () => {
       {procuracoesAtivas.length > 0 && (
         <div>
           <div className={styles.container}>
-            <p>Ativas: {`(${procuracoesAtivas.length})`}</p>
+            <p className={styles.title}>Ativas: {`(${procuracoesAtivas.length})`}</p>
           </div>
           <div className={styles.container}>
             {procuracoesAtivas.map((procuracao, index) => (
