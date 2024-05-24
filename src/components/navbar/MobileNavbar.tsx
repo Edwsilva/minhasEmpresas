@@ -66,7 +66,7 @@ const MobileNavbar = ({ setMenuOpen, menuOpen }: Props) => {
               onClick={() => setMenuOpen(false)}
               style={{ animationDuration: `${(index + 2) * menuItemDelay}s` }}
             >
-              {/* {link.icon} */}
+              {link.icon}
               {link.title}
             </Link>
           ))}

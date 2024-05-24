@@ -1,30 +1,32 @@
 'use client'
 import { useState } from "react";
 import styles from "./links.module.css";
-import NavLink from "./Link/NavLink";
+import NavLink from "./links/NavLink";
+import { IoHome } from "react-icons/io5";
+import { MdBusinessCenter } from "react-icons/md";
+import { FaFileContract } from "react-icons/fa6";
 
-export const links = [
+type Link = {
+  title: string;
+  path: string;
+  icon: JSX.Element;
+}
+
+export const links: Link[] = [
   {
     title: "Home",
     path: "/",
+    icon: <IoHome size={25} className={styles.mobileIcon} />,
   },
   {
     title: "Cadastro de Procurador",
     path: "/procurador",
+    icon: <FaFileContract size={25} className={styles.mobileIcon} />
   },
   {
     title: "Minhas Empresas",
     path: "/empresas",
-  },
-
-  // {
-  //   title: "About",
-  //   path: "/about",
-  // },
-
-  {
-    title: "Login",
-    path: "/login"
+    icon: <MdBusinessCenter size={25} className={styles.mobileIcon} />
   }
 ];
 

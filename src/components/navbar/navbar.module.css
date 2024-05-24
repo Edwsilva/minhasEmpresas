@@ -19,7 +19,7 @@
 }
 
 .logoLink {
-  flex: 2;
+  flex: 1;
 }
 
 .links {
@@ -33,6 +33,10 @@
 .img {
   width: 200px;
   height: auto;
+}
+
+.loginDesktop{
+  margin-left: 15px;
 }
 
 /*Nav Mobile*/
@@ -147,10 +151,6 @@
   width: fit-content;
 }
 
-.mobileIcon{
-  color: var(--primary);
-}
-
 .logoMobile {
   position: absolute;
   top: 23px;
@@ -187,13 +187,19 @@
   }
 }
 
+@media screen and (max-width: 933px){
+  .mobileNav{
+    display: block;
+  }
+  
+  .loginDesktop{
+    display: none;
+  }
+}
+
 @media screen and (max-width: 768px) {
   .img {
     width: 150px;
-  }
-
-  .mobileNav{
-    display: block;
   }
 }
 

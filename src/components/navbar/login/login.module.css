@@ -19,7 +19,7 @@
 .icon {
   font-size: 25px;
   margin-right: 5px;
-  color: var(--primary);
+  color: var(--secondary);
 }
 
 .button:hover {
