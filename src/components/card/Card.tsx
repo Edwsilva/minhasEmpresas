@@ -37,7 +37,7 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
           <Button p textColor="var(--secondary)" text="Aceitar" />
         </div>
       ) : (
-        <div className={styles.buttonContainer}>
+        <div className={styles.buttonContainerAtivas}>
            <Button
             p
             backgroundColor="var(--reject)"

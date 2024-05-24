@@ -4,12 +4,8 @@
   border-radius: 8px; /* Exemplo de bordas arredondadas */
   background-color: #fff; /* Exemplo de cor de fundo */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
-  /* padding: 20px;
-    max-width: 1366px;
-    display: flex;
-    flex-direction: row;
-    background-color: red;
-    margin: auto; */
+  flex-shrink: 0; /* Impede que o conteúdo diminua mais do que o tamanho especificado */
+  width: calc(100% - 40px); /* Define a largura do elemento, subtraindo o dobro do padding */
 }
 
 .innerDiv {
@@ -17,12 +13,6 @@
   display: flex;
   align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
   margin-bottom: 20px;
-}
-
-.textContainer {
-  display: flex;
-  flex-direction: column; /* Organiza os itens verticalmente */
-  justify-content: center; /* Centraliza os itens verticalmente */
 }
 
 .textTitular {
@@ -49,19 +39,21 @@
   margin-top: 20px;
   /* gap: 20px; */
 }
+.buttonContainerAtivas{
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  /* gap: 20px; */
+}
 
+/* Media Query para dispositivos de tela menores */
 @media screen and (max-width: 768px) {
-  .cardContainer {
-    flex-direction: column;
-    margin: 0 auto;
+  .direction {
+    width: 100%; /* Define a largura como 100% em dispositivos menores */
   }
-
-  .card {
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 400px;
-    height: 350px;
-    margin: 10px 0;
+}
+@media screen and (max-width: 1380px){
+  .direction {
+    width: 100%; /* Define a largura como 100% em dispositivos menores */
   }
 }
