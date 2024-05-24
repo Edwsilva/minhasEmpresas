@@ -57,6 +57,7 @@ const Procurador = () => {
                 key={index}
                 inscricao={procuracao.inscricao}
                 titular={procuracao.titular}
+                status={procuracao.status}
               >
                 {procuracao.servico}
               </Card>
@@ -76,6 +77,7 @@ const Procurador = () => {
                 key={index}
                 inscricao={procuracao.inscricao}
                 titular={procuracao.titular}
+                status={procuracao.status}
               >
                 {procuracao.servico}
               </Card>

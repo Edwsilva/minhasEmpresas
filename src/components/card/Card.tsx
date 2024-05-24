@@ -7,11 +7,11 @@ type CardProps = {
   children: ReactNode;
   titular: string;
   inscricao: string;
-  // servico: string
+  status?: string;
   bg?: "primary" | "primaryLight" | "pink";
 };
 
-const Card = ({ children, titular, inscricao, bg }: CardProps) => {
+const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
   return (
     <div className={styles.direction}>
       <div className={styles.innerDiv}>
@@ -23,16 +23,30 @@ const Card = ({ children, titular, inscricao, bg }: CardProps) => {
       </div>
 
       <p className={styles.additionalText}>{children}</p>
-      <div className={styles.buttonContainer}>
-        <Button
-          p
-          backgroundColor="var(--reject)"
-          textColor="var(--reject)"
-          border="1px solid var(--reject)"
-          text="Recusar"
-        />
-        <Button p textColor="var(--secondary)" text="Aceitar" />
-      </div>
+
+      {status === "1" ? (
+        <div className={styles.buttonContainer}>
+          <Button
+            p
+            backgroundColor="var(--reject)"
+            textColor="var(--reject)"
+            border="1px solid var(--reject)"
+            text="Recusar"
+          />
+
+          <Button p textColor="var(--secondary)" text="Aceitar" />
+        </div>
+      ) : (
+        <div className={styles.buttonContainer}>
+           <Button
+            p
+            backgroundColor="var(--reject)"
+            textColor="var(--reject)"
+            border="1px solid var(--reject)"
+            text="Cancelar"
+          />
+        </div>
+      )}
     </div>
   );
 };
