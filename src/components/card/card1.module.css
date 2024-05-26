@@ -1,0 +1,47 @@
+/* Estilos para o ícone e a rotação do card */
+
+  
+  .card {
+   gap: 15px;
+   width: 300px;
+   height: 200px;
+   position: relative;
+   perspective: 800px;
+  }
+  
+  .cardFront,
+  .cardBack {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: all 1s;
+    border: 2px solid #03FA6E;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+  }
+
+  .cardFront {
+    background-color: #afa4a4;
+    color: #fff;
+    border: 2px solid #040705;
+    transform: rotateY(0deg); /* Adicionado para garantir que a frente esteja visível inicialmente */
+  }
+
+  .cardBack {
+    background-color:  #03FA6E;
+    transform: rotateY(180deg)
+}
+
+.isRotated .cardFront{
+    transform: rotateY(180deg);
+}
+
+.isRotated .cardBack{
+    transform: rotateY(0);
+}
+
+ 

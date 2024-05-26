@@ -5,7 +5,6 @@
   background-color: #fff; /* Exemplo de cor de fundo */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
   flex-shrink: 0; /* Impede que o conteúdo diminua mais do que o tamanho especificado */
-  width: calc(100% - 40px); /* Define a largura do elemento, subtraindo o dobro do padding */
 }
 
 .innerDiv {
@@ -44,6 +43,15 @@
   justify-content: center;
   margin-top: 20px;
   /* gap: 20px; */
+}
+
+.icon-container {
+  cursor: pointer;
+}
+
+/* Define a rotação do card */
+.rotate-card {
+  transform: rotate(90deg);
 }
 
 /* Media Query para dispositivos de tela menores */
