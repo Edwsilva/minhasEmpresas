@@ -10,7 +10,7 @@
   display: grid;
   grid-template-columns: repeat(
     auto-fill,
-    minmax(250px, 1fr)
+    minmax(300px, 1fr)
   ); /* Gera colunas automáticas de no mínimo 250px e ajusta-se ao espaço disponível */
   gap: 20px; /* Espaçamento entre os cards */
 }
