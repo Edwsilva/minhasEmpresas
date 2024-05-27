@@ -35,7 +35,7 @@
   .button:hover {
     transition: 0.3s all ease;
     background-color: transparent;
-    color: var(--primaty);
+    color: var(--secondary);
   }
   
   @media screen and (max-width: 480px) {

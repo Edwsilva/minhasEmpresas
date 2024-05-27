@@ -1,8 +1,10 @@
 .links {
-  text-align: center;
+  flex: 1;
   display: flex;
+  justify-content: flex-end;
+  gap: 15px;
   align-items: center;
-  gap: 10px;
+  font-size: 1rem;
 }
 
 .logout {
@@ -16,31 +18,11 @@
   display: none;
 }
 
-/* @media (max-width: 768px) {
-    .links {
-      display: none;
-    }
-  
-    .menuButton {
-      display: block;
-      cursor: pointer;
-    } */
+.mobileIcon{
+  color: var(--secondary);
+}
 
-/* .mobileLinks {
-      position: absolute;
-      top: 100px;
-      right: 0;
-      width: 50%;
-      height: calc(100vh - 100px);
-      background-color: red;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 10px;
-    } */
-
-@media (max-width: 768px) {
+@media (max-width: 933px) {
   .links {
     display: none;
   }
@@ -62,7 +44,6 @@
     background-color: white;
     display: flex;
     flex-direction: column;
-    
     align-items: flex-start; 
     /* justify-content: center; */
     gap: 10px;

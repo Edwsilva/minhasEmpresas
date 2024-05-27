@@ -3,29 +3,20 @@
   flex: 1;
   justify-content: flex-start;
 }
+
 .bannerTitle {
   margin-bottom: 10px;
 }
+
 .bannerText {
   margin-bottom: 10px;
 }
-.servico {
+
+.servico { 
   text-align: center;
-  padding-top: 50px;
+  margin-top: 50px;
 }
 
-.mainWrapper {
-  padding-top: 10px;
-  padding-bottom: 10px;
-  height: 100%;
-  /* max-width: 80%; */
-  text-align: center;
-  margin: auto;
-  max-width: 1366px;
-  display: flex;
-  margin: 0 auto;
-  gap: 10px;
-}
 .text {
   font-size: 1em;
   line-height: 1.6em;
@@ -44,43 +35,44 @@
   /* align-content: center; */
 }
 
-.icon {
-  /* display: flex; */
-  font-size: 2.5rem;
-  color: #1bc5a0;
-  align-items: center;
-}
-.arrowIcon {
-  display: flex;
-  align-items: center; /* Centraliza verticalmente o ícone dentro da coluna */
-  justify-content: center; /* Centraliza horizontalmente o ícone dentro da coluna */
-  height: 100%; /* Faz o ícone ocupar a altura total da célula da grade */
-  font-size: 2.5rem;
-  color: #d8dada;
-}
 .mainContainer {
-  text-align: center;
-  margin: auto;
-  max-width: 1366px;
   display: grid;
-  grid-template-columns: repeat(
-    3,
-    1fr
-  ); /* Cria três colunas de largura igual */
-  gap: 20px; /* Espaçamento entre os modelos */
-  padding: 0px; /* Adiciona algum espaçamento interno */
-  margin-bottom: 20px;
+  grid-template-columns: 1fr auto 1fr auto 1fr;
+  align-items: start;
+  gap: 10px;
+  margin: 20px auto 50px auto;
 }
 
-.container {
-  display: grid;
-  grid-template-columns: 1fr auto; /* Define duas colunas: a primeira ocupa o espaço restante, a segunda ajusta-se ao conteúdo */
-  align-items: flex-start; /* Alinha os itens verticalmente ao centro */
-  gap: 10px; /* Espaçamento entre as colunas */
-  /* background-color: #f0f0f0;  Cor de fundo para melhor visualização  */
-  /* border: 1px solid #ddd;  Bordas para melhor visualização  */
-  border-radius: 8px; /* Bordas arredondadas para melhor visualização */
-  padding: 20px; /* Adiciona algum espaçamento interno */
+.iconContainer{
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.arrowIconRight {
+  color: #D8DADA;
+  font-size: 3rem;
+}
+
+.arrowIconDown {
+  display: none;
+}
+
+.card {
+  margin-top: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  font-size: .9rem;
+}
+
+.icon {
+  font-size: 3rem;
+  color: #1bc5a0;
+  align-items: center;
 }
 
 .content {
@@ -94,26 +86,11 @@
   /* Estilos específicos para a imagem, se necessário */
 }
 
-.text {
-  margin-top: 10px; /* Adiciona espaçamento vertical entre a imagem e o texto */
-}
-
-.icon {
-  /* Estilos específicos para o ícone, se necessário */
-}
-
 /* Responsividade */
-@media (max-width: 1200px) {
-  .mainContainer {
-    grid-template-columns: 1fr 1fr; /* Duas colunas para telas médias */
-    gap: 15px; /* Ajusta o espaçamento */
-  }
-}
-
 @media (max-width: 768px) {
   .mainContainer {
     grid-template-columns: 1fr; /* Uma coluna para telas pequenas */
-    gap: 10px; /* Ajusta o espaçamento */
+    gap: 20px; /* Ajusta o espaçamento */
   }
 
   .container {
@@ -123,8 +100,17 @@
     gap: 0px;
   }
 
-  .arrowIcon {
+  .iconContainer{
+    justify-content: center;
+  }
+
+  .arrowIconRight {
     display: none;
-    height: 0px;
+  }
+  
+  .arrowIconDown {
+    display: block;
+    color: #D8DADA;
+    font-size: 3rem;
   }
 }

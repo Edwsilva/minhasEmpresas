@@ -1,20 +1,35 @@
+'use client'
 import Links from "./links/Links";
 import styles from "./navbar.module.css";
-import Login from "../../app/(auth)/login/page";
+// import Login from "../../app/(auth)/login/page";
 import Image from "next/image";
 import Link from "next/link";
 import logo from "@/../public/images/logoNovo.png";
+import MobileNavbar from "./MobileNavbar";
+import MobileNavbarButton from "./MobileNavbarButton";
+import { useState } from "react";
+import Login from "./login/Login";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // const handleMenuOpen = (controller: boolean) => {
+  //   setMenuOpen(controller);
+  // }
+
   return (
     <header className={styles.header}>
       <div className={styles.container}>
-        <Link href="/" className={styles.logo}>
-          <Image className={styles.img} src={logo} alt="Logo" />
-        </Link>
-        <div className={styles.containerBody}>
-          <Links />
-          {/* <Login /> */}
+        <div className={styles.logoLink}>
+          <Link href="/" className={styles.logo}>
+            <Image className={styles.img} src={logo} alt="Logo" />
+          </Link>
+        </div>
+        <Links />
+        <MobileNavbarButton setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+        <MobileNavbar setMenuOpen={setMenuOpen} menuOpen={menuOpen} />
+        <div className={styles.loginDesktop}>
+          <Login />
         </div>
       </div>
     </header>

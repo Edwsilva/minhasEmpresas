@@ -40,16 +40,16 @@ const AboutPage = () => {
       <div className={styles.imgContainer}>
         <Image
           src="/about.png"
-        //  images: {
-        //     remotePatterns: [
-        //       {
-        //         protocol: "https",
-        //         hostname: "images.pexels.com",
-        //       },
-        //     ],
-        //   },
-        // Necessário para colocar imagem externa
-        //   src="https://images.pexels.com/photos/16152805/pexels-photo-16152805/free-photo-of-open-laptop-reflecting-in-a-table.jpeg"
+          //  images: {
+          //     remotePatterns: [
+          //       {
+          //         protocol: "https",
+          //         hostname: "images.pexels.com",
+          //       },
+          //     ],
+          //   },
+          // Necessário para colocar imagem externa
+          //   src="https://images.pexels.com/photos/16152805/pexels-photo-16152805/free-photo-of-open-laptop-reflecting-in-a-table.jpeg"
           alt="About Image"
           fill
           className={styles.img}
