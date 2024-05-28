@@ -15,14 +15,14 @@ interface Procuracao {
 }
 
 async function fetchProcuracoes() {
-  const data = await fetchUrl();
+  const data = await fetchUrl('procuracoes');
   console.log("DATA ", data);
   return data;
 }
 
 const Procurador = () => {
   const [procuracoes, setProcuracoes] = useState<Procuracao[]>([]);
- 
+
   // Separar as procurações em ativas e pendentes
   const procuracoesAtivas = procuracoes.filter(
     (procuracao) => procuracao.status !== "1"
@@ -30,7 +30,7 @@ const Procurador = () => {
   const procuracoesPendentes = procuracoes.filter(
     (procuracao) => procuracao.status === "1"
   );
-  
+
   useEffect(() => {
     const fetchAndSetProcuracoes = async () => {
       const response = await fetchProcuracoes();

@@ -6,8 +6,6 @@
 :root {
   --bg: #0d0c22;
   --bgSoft: #2d2b42;
-  --textSoft: #e5e5e5;
-  --text: #fff;
   --btn: #3673fd;
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
@@ -19,6 +17,7 @@
   --secondary: #09b78b;
   --secondaryLight: #84dbc5;
   --secondaryDark: #07926f;
+  --text: #b1b4b6;
   --textLight: #d8dada;
   --textLighter: #ececec;
   --textLighter2: #f2f1f1;

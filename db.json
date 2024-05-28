@@ -1,20 +1,162 @@
 {
-    "empresas": [
-      { "id": "1", "titular": "Empresa 1", "inscricao": "01.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa1?", "status": "1" },
-      { "id": "2", "titular": "Empresa 2", "inscricao": "02.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa2?", "status": "2" },
-      { "id": "3", "titular": "Empresa 3", "inscricao": "03.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa3?", "status": "1" },
-      { "id": "4", "titular": "Empresa 4", "inscricao": "04.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa4?", "status": "1" },
-      { "id": "5", "titular": "Empresa 5", "inscricao": "05.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa5?", "status": "2" },
-      { "id": "6", "titular": "Empresa 6", "inscricao": "06.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa6?", "status": "1" },
-      { "id": "7", "titular": "Empresa 7", "inscricao": "07.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa7?", "status": "1" },
-      { "id": "8", "titular": "Empresa 8", "inscricao": "08.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa8?", "status": "2" },
-      { "id": "9", "titular": "Empresa 9", "inscricao": "09.256.365/0001-22", "servico": "Confirmar convite de procuração para empresa9?", "status": "1" }
-    ],
-    "comments": [
-      { "id": "1", "text": "a comment about post 1", "postId": "1" },
-      { "id": "2", "text": "another comment about post 1", "postId": "1" }
-    ],
-    "profile": {
-      "name": "typicode"
+  "procuracoes": [
+    {
+      "id": "1",
+      "titular": "Empresa 1",
+      "inscricao": "01.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa1?",
+      "status": "1"
+    },
+    {
+      "id": "2",
+      "titular": "Empresa 2",
+      "inscricao": "02.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa2?",
+      "status": "2"
+    },
+    {
+      "id": "3",
+      "titular": "Empresa 3",
+      "inscricao": "03.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa3?",
+      "status": "1"
+    },
+    {
+      "id": "4",
+      "titular": "Empresa 4",
+      "inscricao": "04.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa4?",
+      "status": "1"
+    },
+    {
+      "id": "5",
+      "titular": "Empresa 5",
+      "inscricao": "05.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa5?",
+      "status": "2"
+    },
+    {
+      "id": "6",
+      "titular": "Empresa 6",
+      "inscricao": "06.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa6?",
+      "status": "1"
+    },
+    {
+      "id": "7",
+      "titular": "Empresa 7",
+      "inscricao": "07.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa7?",
+      "status": "1"
+    },
+    {
+      "id": "8",
+      "titular": "Empresa 8",
+      "inscricao": "08.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa8?",
+      "status": "2"
+    },
+    {
+      "id": "9",
+      "titular": "Empresa 9",
+      "inscricao": "09.256.365/0001-22",
+      "servico": "Confirmar convite de procuração para empresa9?",
+      "status": "1"
     }
+  ],
+  "empresas": [
+    {
+      "id": 1,
+      "nome": "Burgers.Rio LTA",
+      "nomeFantasia": "Burgers.rio",
+      "representante": false,
+      "cnpj": "02.362.370/0001-02",
+      "procuradores": [
+        {
+          "nome": "Rick Grimes",
+          "periodo": "30/11/2017 até 30/11/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "aprovado"
+        },
+        {
+          "nome": "Ricardo Coração de Leão",
+          "periodo": "19/05/2019 até 19/05/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "aprovado"
+        },
+        {
+          "nome": "Ricks on The Barbie",
+          "periodo": "30/11/2017 até 30/11/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "pendente"
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "nome": "Pizza e Cia LTA",
+      "nomeFantasia": "Pizza & Cia",
+      "representante": true,
+      "cnpj": "02.362.370/0001-02",
+      "procuradores": [
+        {
+          "nome": "Rick Grimes",
+          "periodo": "30/11/2017 até 30/11/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "aprovado"
+        },
+        {
+          "nome": "Ricardo Coração de Leão",
+          "periodo": "19/05/2019 até 19/05/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "aprovado"
+        },
+        {
+          "nome": "Ricks on The Barbie",
+          "periodo": "30/11/2017 até 30/11/2050",
+          "atividades": [
+            "Alvará Transitório de Eventos",
+            "Licenciamento da Vigilância Sanitária",
+            "Rio Mais Fácil Negócios"
+          ],
+          "status": "pendente"
+        }
+      ]
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
   }
+}
