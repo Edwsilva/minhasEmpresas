@@ -11,7 +11,6 @@
 .innerDiv {
   width: 100%;
   display: flex;
-  align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
   margin-bottom: 20px;
 }
 
@@ -19,14 +18,35 @@
   font-size: 1.1rem;
   line-height: 1.6rem;
   font-weight: 600;
+  color: var(--textDark);
 }
+
 .text {
   font-size: 0.9rem;
+  color: var(--text);
+}
+
+.iconContainer{
+  cursor: pointer;
+  margin-left: auto; /* Empurra o ícone para a extremidade direita */
+  border: 1px solid #595A5B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.iconContainer:hover{
+  background-color: #595A5B;
+  color: white;
 }
 
 .icon {
-  margin-left: auto; /* Empurra o ícone para a extremidade direita */
-  font-size: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
 }
 
 .additionalText {
@@ -37,13 +57,19 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  /* gap: 20px; */
 }
+
+.buttonContainer > button{
+  width: 40%;
+}
+
 .buttonContainerAtivas{
   display: flex;
-  justify-content: center;
   margin-top: 20px;
-  /* gap: 20px; */
+}
+
+.buttonContainerAtivas > button{
+  width: 40%;
 }
 
 /* Media Query para dispositivos de tela menores */

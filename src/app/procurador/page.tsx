@@ -5,6 +5,7 @@ import styles from "./procurador.module.css";
 import Button from "@/components/button/Button";
 import Card from "@/components/card/Card";
 import { fetchUrl } from "../../api/procuracao";
+import Container from "@/components/container/Container";
 
 interface Procuracao {
   id: string;
@@ -44,47 +45,44 @@ const Procurador = () => {
       <Banner type="overlaySM" banner="bannerProcurador">
         <h1>Minhas Procurações</h1>
       </Banner>
-      {/* <h1>Minhas procurações</h1> */}
-      {procuracoesPendentes.length > 0 && (
-        <div>
-          <div className={styles.container}>
-            <p className={styles.title}>Pendentes: {`(${procuracoesPendentes.length})`}</p>
-          </div>
-
-          <div className={styles.container}>
-            {procuracoesPendentes.map((procuracao, index) => (
-              <Card
-                key={index}
-                inscricao={procuracao.inscricao}
-                titular={procuracao.titular}
-                status={procuracao.status}
-              >
-                {procuracao.servico}
-              </Card>
-            ))}
-          </div>
+      <Container>
+        <h2 className={styles.title}>Minhas procurações</h2>
+        <div className={styles.container}>
+          <h3 className={styles.title2}>Pendentes: {`(${procuracoesPendentes.length})`}</h3>
+          {procuracoesPendentes.length > 0 && (
+            <div className={styles.contentContainer}>
+              {procuracoesPendentes.map((procuracao, index) => (
+                <Card
+                  key={index}
+                  inscricao={procuracao.inscricao}
+                  titular={procuracao.titular}
+                  status={procuracao.status}
+                >
+                  {procuracao.servico}
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
-      )}
 
-      {procuracoesAtivas.length > 0 && (
-        <div>
-          <div className={styles.container}>
-            <p className={styles.title}>Ativas: {`(${procuracoesAtivas.length})`}</p>
-          </div>
-          <div className={styles.container}>
-            {procuracoesAtivas.map((procuracao, index) => (
-              <Card
-                key={index}
-                inscricao={procuracao.inscricao}
-                titular={procuracao.titular}
-                status={procuracao.status}
-              >
-                {procuracao.servico}
-              </Card>
-            ))}
-          </div>
+        <div className={styles.container}>
+          <h3 className={styles.title2}>Ativas: {`(${procuracoesAtivas.length})`}</h3>
+          {procuracoesAtivas.length > 0 && (
+            <div className={styles.contentContainer}>
+              {procuracoesAtivas.map((procuracao, index) => (
+                <Card
+                  key={index}
+                  inscricao={procuracao.inscricao}
+                  titular={procuracao.titular}
+                  status={procuracao.status}
+                >
+                  {procuracao.servico}
+                </Card>
+              ))}
+            </div>
+          )}
         </div>
-      )}
+      </Container>
     </div>
   );
 };

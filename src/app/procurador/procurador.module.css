@@ -3,30 +3,36 @@
   flex: 1;
 }
 
-.container {
-  max-width: 1366px;
-  margin: 0 auto;
-  padding: 10px;
+.container{
+  margin-bottom: 20px;
+}
+
+.container:last-child{
+  margin-bottom: 50px;
+}
+
+.contentContainer {
   display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Gera colunas automáticas de no mínimo 250px e ajusta-se ao espaço disponível */
+  grid-template-columns: repeat(auto-fill,minmax(300px, 1fr)); /* Gera colunas automáticas de no mínimo 250px e ajusta-se ao espaço disponível */
   gap: 20px; /* Espaçamento entre os cards */
 }
 
 .title {
+  font-size: 1.6rem;
+  line-height: 1.6em;
+  margin: 20px 0;
+}
+
+.title2{
   font-size: 1.2rem;
-  font-weight: 600;
+  line-height: 1.6em;
+  margin-bottom: 20px;
+  font-weight: 500;
 }
 
 @media screen and (max-width: 1366px) {
   .main {
     margin-top: 100px;
-  }
-
-  .container {
-    margin: 0 5%;
   }
 }
 

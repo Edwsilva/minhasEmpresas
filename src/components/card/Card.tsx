@@ -1,7 +1,7 @@
 import { ReactNode } from "react";
 import styles from "./card.module.css";
 import Button from "../button/Button";
-import { IoMdInformationCircleOutline } from "react-icons/io";
+import { IoMdInformation } from "react-icons/io";
 
 type CardProps = {
   children: ReactNode;
@@ -19,7 +19,9 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
           <p className={styles.textTitular}>{titular}</p>
           <p className={styles.text}>{inscricao}</p>
         </div>
-        <IoMdInformationCircleOutline className={styles.icon} />
+        <div className={styles.iconContainer}>
+          <IoMdInformation className={styles.icon} />
+        </div>
       </div>
 
       <p className={styles.additionalText}>{children}</p>
@@ -28,9 +30,9 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
         <div className={styles.buttonContainer}>
           <Button
             p
-            backgroundColor="var(--reject)"
-            textColor="var(--reject)"
-            border="1px solid var(--reject)"
+            backgroundColor="var(--error)"
+            textColor="var(--error)"
+            border="1px solid var(--error)"
             text="Recusar"
           />
 
@@ -38,11 +40,11 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
         </div>
       ) : (
         <div className={styles.buttonContainerAtivas}>
-           <Button
+          <Button
             p
-            backgroundColor="var(--reject)"
-            textColor="var(--reject)"
-            border="1px solid var(--reject)"
+            backgroundColor="var(--error)"
+            textColor="var(--error)"
+            border="1px solid var(--error)"
             text="Cancelar"
           />
         </div>
