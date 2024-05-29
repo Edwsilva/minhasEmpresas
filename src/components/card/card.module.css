@@ -1,6 +1,6 @@
 .direction {
   border: 1px solid #ddd; /* Exemplo de borda */
-  padding: 20px; /* Exemplo de padding */
+ 
   border-radius: 8px; /* Exemplo de bordas arredondadas */
   background-color: #fff; /* Exemplo de cor de fundo */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
@@ -70,6 +70,47 @@
 
 .buttonContainerAtivas > button{
   width: 40%;
+}
+
+.card {
+  position: relative;
+  perspective: 800px;
+ }
+ 
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+ 
+  backface-visibility: hidden;
+  transition: all 1s;
+  border: 2px solid #03FA6E;
+  border-radius: 10px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* cursor: pointer; */
+}
+.cardFront {
+  position: absolute;
+  background-color: #fff;
+  /* color: #fff; */
+  border: 2px solid #040705;
+  transform: rotateY(0deg); /* Adicionado para garantir que a frente esteja visível inicialmente */
+}
+
+.cardBack {
+  background-color:  #c9d6cf;
+  transform: rotateY(180deg)
+}
+
+.isRotated .cardFront{
+  transform: rotateY(180deg);
+}
+
+.isRotated .cardBack{
+  transform: rotateY(0);
 }
 
 /* Media Query para dispositivos de tela menores */
