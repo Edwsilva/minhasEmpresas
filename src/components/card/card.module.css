@@ -1,6 +1,6 @@
 .direction {
   border: 1px solid #ddd; /* Exemplo de borda */
-  padding: 20px; /* Exemplo de padding */
+ 
   border-radius: 8px; /* Exemplo de bordas arredondadas */
   background-color: #fff; /* Exemplo de cor de fundo */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
@@ -10,7 +10,6 @@
 .innerDiv {
   width: 100%;
   display: flex;
-  align-items: center; /* Centraliza verticalmente os itens dentro do contêiner interno */
   margin-bottom: 20px;
 }
 
@@ -18,14 +17,35 @@
   font-size: 1.1rem;
   line-height: 1.6rem;
   font-weight: 600;
+  color: var(--textDark);
 }
+
 .text {
   font-size: 0.9rem;
+  color: var(--text);
+}
+
+.iconContainer{
+  cursor: pointer;
+  margin-left: auto; /* Empurra o ícone para a extremidade direita */
+  border: 1px solid #595A5B;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20px;
+  height: 20px;
+}
+
+.iconContainer:hover{
+  background-color: #595A5B;
+  color: white;
 }
 
 .icon {
-  margin-left: auto; /* Empurra o ícone para a extremidade direita */
-  font-size: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  border-radius: 50%;
 }
 
 .additionalText {
@@ -36,13 +56,60 @@
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
-  /* gap: 20px; */
 }
+
+.buttonContainer > button{
+  width: 40%;
+}
+
 .buttonContainerAtivas{
   display: flex;
-  justify-content: center;
   margin-top: 20px;
-  /* gap: 20px; */
+}
+
+.buttonContainerAtivas > button{
+  width: 40%;
+}
+
+.card {
+  position: relative;
+  perspective: 800px;
+ }
+ 
+.cardFront,
+.cardBack {
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+ 
+  backface-visibility: hidden;
+  transition: all 1s;
+  border: 2px solid #03FA6E;
+  border-radius: 10px;
+  /* display: flex; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* cursor: pointer; */
+}
+.cardFront {
+  position: absolute;
+  background-color: #fff;
+  /* color: #fff; */
+  border: 2px solid #040705;
+  transform: rotateY(0deg); /* Adicionado para garantir que a frente esteja visível inicialmente */
+}
+
+.cardBack {
+  background-color:  #c9d6cf;
+  transform: rotateY(180deg)
+}
+
+.isRotated .cardFront{
+  transform: rotateY(180deg);
+}
+
+.isRotated .cardBack{
+  transform: rotateY(0);
 }
 
 .icon-container {

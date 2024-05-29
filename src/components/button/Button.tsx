@@ -14,7 +14,7 @@ type ButtonProps = {
 }
 
 const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, border }: ButtonProps) => {
-    
+
     const [isHovered, setIsHovered] = useState(false);
 
     const handleMouseEnter = () => {
@@ -25,16 +25,16 @@ const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, 
         setIsHovered(false)
     };
 
-    const buttonBackgroundColor = isHovered ? "transparent" : backgroundColor; 
-    const buttonTextColor = isHovered ? textColor: 'var(--text)' ;
+    const buttonBackgroundColor = isHovered ? "transparent" : backgroundColor;
+    const buttonTextColor = isHovered ? textColor : 'white';
 
     return (
         <button className={`${styles.button} ${hidden ? styles.hidden : ""} ${buttonModal ? styles.buttonModal : ""} 
-        ${p ? styles.p5 : styles.p10 } `}
-        style={{ backgroundColor: buttonBackgroundColor, color: buttonTextColor, border }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-        onClick={fn}>{text}</button>
+        ${p ? styles.p5 : styles.p10} `}
+            style={{ backgroundColor: buttonBackgroundColor, color: buttonTextColor, border }}
+            onMouseEnter={handleMouseEnter}
+            onMouseLeave={handleMouseLeave}
+            onClick={fn}>{text}</button>
     )
 }
 

@@ -28,14 +28,15 @@
   .p10 {
     padding: 20px;
   }
+
   .p5 {
-    padding: 8px 20px;
+    padding: 7.5px 0;
   }
   
   .button:hover {
     transition: 0.3s all ease;
     background-color: transparent;
-    color: var(--primaty);
+    color: var(--secondary);
   }
   
   @media screen and (max-width: 480px) {

@@ -1,0 +1,81 @@
+.empresaDropdown,
+.empresaDropdownVisible{
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  color: var(--textDark);
+}
+
+.empresaDropdownVisible{
+  border-bottom: none;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.empresa{
+  margin: 10px 0;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+}
+
+.empresaDropdown:hover button > .menuIcon span,
+.empresaDropdownVisible:hover button > .menuIcon span{
+  background-color: var(--secondary);
+}
+
+.empresaGroup{
+  display: flex;
+  gap: 15px;
+}
+
+.iconButton {
+  cursor: pointer;
+  display: block;
+  text-align: right;
+  border: none;
+  background: none;
+}
+
+.menuIcon span {
+  display: block;
+  width: 20px;
+  height: 2px;
+  background-color: var(--text);
+  transition: transform .3s ease;
+}
+
+.menuIcon span:nth-child(1),
+.menuIcon span:nth-child(2){
+  margin-bottom: 5px;
+}
+
+.open span:nth-child(1) {
+  transform: rotate(45deg) translate(6.5px, 4px);
+}
+
+.open span:nth-child(2) {
+  opacity: 0;
+
+}
+
+.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(5.5px, -3.5px);
+}
+
+@media screen and (max-width: 480px){
+  .empresaGroup{
+    font-size: .9rem;
+    display: flex;
+    gap: 5px;
+  }
+
+  .empresaGroup span b{
+    display: block;
+  }
+
+  .signatureLine{
+    width: 200px;
+  }
+}
