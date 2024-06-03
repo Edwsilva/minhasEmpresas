@@ -67,6 +67,9 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
             <div>
               <p className={styles.textTitular}>{titular}</p>
               <p className={styles.text}>{inscricao}</p>
+              <p className={styles.textTitular}>{titular}</p>
+              <p className={styles.text}>{inscricao}</p>
+             
             </div>
             <div className={styles.iconContainer}  onClick={handleIconClick}>
               <IoMdInformation className={styles.icon} />

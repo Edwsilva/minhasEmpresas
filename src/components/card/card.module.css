@@ -49,6 +49,7 @@
 }
 
 .additionalText {
+  color: #5b5959;
   margin: 10px 0; /* Adiciona espaçamento acima e abaixo do parágrafo adicional */
 }
 
@@ -74,7 +75,10 @@
 .card {
   position: relative;
   perspective: 800px;
- }
+  width: 100%;
+  height: 200px; 
+  overflow: auto;
+}
  
 .cardFront,
 .cardBack {
@@ -84,23 +88,26 @@
  
   backface-visibility: hidden;
   transition: all 1s;
-  border: 2px solid #03FA6E;
-  border-radius: 10px;
+  border: 1px solid #595A5B;
+  border-radius: 8px; 
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
   /* cursor: pointer; */
+  overflow-y: auto;
+  /* padding: 20px; */
+  word-wrap: break-word;
 }
 .cardFront {
   position: absolute;
-  background-color: #fff;
-  /* color: #fff; */
-  border: 2px solid #040705;
+  background-color: #FFFFFF;
+  border: 2px solid #595A5B;
   transform: rotateY(0deg); /* Adicionado para garantir que a frente esteja visível inicialmente */
 }
 
 .cardBack {
-  background-color:  #c9d6cf;
+  /* width: 100%; */
+  background-color:  #FFFFFF;
   transform: rotateY(180deg)
 }
 

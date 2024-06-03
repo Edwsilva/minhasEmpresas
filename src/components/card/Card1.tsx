@@ -19,6 +19,9 @@ function DirectionCard() {
       {/* Cartão */}
       <div className={styles.cardFront}>
      
+       
+        <h2>Informações da Frente</h2>
+        <h2>Informações da Frente</h2>
         <h2>Informações da Frente</h2>
 
         <div className={styles.iconContainer} onClick={handleIconClick}>
@@ -28,6 +31,7 @@ function DirectionCard() {
      
       <div className={styles.cardBack}>
         <h2>Informações do verso</h2>
+       
         
         <div className={styles.iconContainer} onClick={handleIconClick}>
           <IoMdInformationCircleOutline className={styles.icon} />

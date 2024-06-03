@@ -22,6 +22,10 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    overflow: hidden;
+    padding: 20px;
+    word-wrap: break-word; /* ou overflow-wrap: break-word; */
+    flex-direction: column;
   }
 
   .cardFront {

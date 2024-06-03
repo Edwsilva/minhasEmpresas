@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import styles from "./procuracoes.module.css";
 import Card from "@/components/card/Card";
+import Card1 from '@/components/card/Card1'
 import { fetchUrl } from "../../api/procuracao";
 interface Procuracao {
   id: string;
