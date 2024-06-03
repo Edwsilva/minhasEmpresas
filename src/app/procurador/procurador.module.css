@@ -3,10 +3,14 @@
   flex: 1;
 }
 
-.container{
+/* .container{
   margin-bottom: 20px;
-}
+} */
 
+.container {
+  max-width: 1366px;
+  margin: 0 auto;
+}
 .container:last-child{
   margin-bottom: 50px;
 }
