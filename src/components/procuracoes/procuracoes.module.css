@@ -28,6 +28,13 @@
     line-height: 1.6em;
     margin-bottom: 20px;
     font-weight: 500;
+    color: var(--textDark)
+  }
+  .titleLi {
+    font-size: 0.9rem;
+    line-height: 1.2rem;
+    color: var(--text)
+   
   }
   
   @media screen and (max-width: 1366px) {

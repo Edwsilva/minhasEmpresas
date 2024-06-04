@@ -1,8 +1,9 @@
 "use client";
 import { useEffect, useState } from "react";
+import React from "react";
 import styles from "./procuracoes.module.css";
 import Card from "@/components/card/Card";
-import Card1 from '@/components/card/Card1'
+import Card1 from "@/components/card/Card1";
 import { fetchUrl } from "../../api/procuracao";
 interface Procuracao {
   id: string;
@@ -10,6 +11,7 @@ interface Procuracao {
   inscricao: string;
   servico: string;
   status: string;
+  atividades: string[];
 }
 
 async function fetchProcuracoes() {
@@ -35,7 +37,7 @@ const Procuracoes = () => {
     };
     fetchAndSetProcuracoes();
   }, []);
-
+  console.log("Procurações ativas ", procuracoesAtivas);
   return (
     <div>
       <h2 className={styles.title}>Minhas procurações</h2>
@@ -51,8 +53,16 @@ const Procuracoes = () => {
                 inscricao={procuracao.inscricao}
                 titular={procuracao.titular}
                 status={procuracao.status}
+                servico={procuracao.servico}
               >
-                {procuracao.servico}
+                <div>
+                  {procuracao.atividades &&
+                    procuracao.atividades.map((atividades, index) => (
+                      <React.Fragment key={index}>
+                        <li className={styles.titleLi}>{atividades}</li>
+                      </React.Fragment>
+                    ))}
+                </div>
               </Card>
             ))}
           </div>
@@ -71,8 +81,16 @@ const Procuracoes = () => {
                 inscricao={procuracao.inscricao}
                 titular={procuracao.titular}
                 status={procuracao.status}
+                servico={procuracao.servico}
               >
-                {procuracao.servico}
+                <div>
+                  {procuracao.atividades &&
+                    procuracao.atividades.map((atividades, index) => (
+                      <React.Fragment key={index}>
+                        <li className={styles.titleLi}>{atividades}</li>
+                      </React.Fragment>
+                    ))}
+                </div>
               </Card>
             ))}
           </div>

@@ -5,63 +5,101 @@
       "titular": "Empresa 1",
       "inscricao": "01.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa1?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Alvará Transitório de Eventos",
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "2",
       "titular": "Empresa 2",
       "inscricao": "02.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa2?",
-      "status": "2"
+      "status": "2",
+      "atividades": [
+        "Alvará Transitório de Eventos",
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "3",
       "titular": "Empresa 3",
       "inscricao": "03.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa3?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Alvará Transitório de Eventos",
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "4",
       "titular": "Empresa 4",
       "inscricao": "04.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa4?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Alvará Transitório de Eventos"
+      ]
     },
     {
       "id": "5",
       "titular": "Empresa 5",
       "inscricao": "05.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa5?",
-      "status": "2"
+      "status": "2",
+      "atividades": [
+        "Alvará Transitório de Eventos",
+        "Licenciamento da Vigilância Sanitária"
+      ]
     },
     {
       "id": "6",
       "titular": "Empresa 6",
       "inscricao": "06.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa6?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "7",
       "titular": "Empresa 7",
       "inscricao": "07.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa7?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Alvará Transitório de Eventos",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "8",
       "titular": "Empresa 8",
       "inscricao": "08.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa8?",
-      "status": "2"
+      "status": "2",
+      "atividades": [
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     },
     {
       "id": "9",
       "titular": "Empresa 9",
       "inscricao": "09.256.365/0001-22",
       "servico": "Confirmar convite de procuração para empresa9?",
-      "status": "1"
+      "status": "1",
+      "atividades": [
+        "Licenciamento da Vigilância Sanitária",
+        "Rio Mais Fácil Negócios"
+      ]
     }
   ],
   "empresas": [

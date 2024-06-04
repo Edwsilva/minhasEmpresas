@@ -9,12 +9,21 @@ type CardProps = {
   titular: string;
   inscricao: string;
   status?: string;
+  servico: string;
+
   bg?: "primary" | "primaryLight" | "pink";
 };
 
-const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
+const Card = ({
+  children,
+  titular,
+  inscricao,
+  servico,
+  bg,
+  status,
+}: CardProps) => {
   const [isRotated, setIsRotated] = useState(false); // Define o estado para controlar se o card está rotacionado
-
+  console.log("ATIVIDADES ", children);
   // Função para lidar com o clique no ícone
   const handleIconClick = () => {
     console.log("Rotate");
@@ -31,12 +40,13 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
               <p className={styles.textTitular}>{titular}</p>
               <p className={styles.text}>{inscricao}</p>
             </div>
-            <div className={styles.iconContainer}  onClick={handleIconClick}>
+            <div className={styles.iconContainer} onClick={handleIconClick}>
               <IoMdInformation className={styles.icon} />
             </div>
           </div>
-
-          <p className={styles.additionalText}>{children}</p>
+          <div>
+            <p className={styles.additionalText}>{servico}</p>
+          </div>
 
           {status === "1" ? (
             <div className={styles.buttonContainer}>
@@ -64,44 +74,14 @@ const Card = ({ children, titular, inscricao, bg, status }: CardProps) => {
         </div>
         <div className={styles.cardBack}>
           <div className={styles.innerDiv}>
-            <div>
-              <p className={styles.textTitular}>{titular}</p>
-              <p className={styles.text}>{inscricao}</p>
-              <p className={styles.textTitular}>{titular}</p>
-              <p className={styles.text}>{inscricao}</p>
-             
-            </div>
-            <div className={styles.iconContainer}  onClick={handleIconClick}>
+            <h3>Atividades</h3>
+            <div className={styles.iconContainer} onClick={handleIconClick}>
               <IoMdInformation className={styles.icon} />
             </div>
           </div>
-
-
-          <p className={styles.additionalText}>{children}</p>
-
-          {status === "1" ? (
-            <div className={styles.buttonContainer}>
-              <Button
-                p
-                backgroundColor="var(--error)"
-                textColor="var(--error)"
-                border="1px solid var(--error)"
-                text="Recusar"
-              />
-
-              <Button p textColor="var(--secondary)" text="Aceitar" />
-            </div>
-          ) : (
-            <div className={styles.buttonContainerAtivas}>
-              <Button
-                p
-                backgroundColor="var(--error)"
-                textColor="var(--error)"
-                border="1px solid var(--error)"
-                text="Cancelar"
-              />
-            </div>
-          )}
+          <div>
+            <p className={styles.additionalText}>{children}</p>
+          </div>
         </div>
       </div>
     </div>
