@@ -23,7 +23,7 @@ const Card = ({
   status,
 }: CardProps) => {
   const [isRotated, setIsRotated] = useState(false); // Define o estado para controlar se o card está rotacionado
-  console.log("ATIVIDADES ", children);
+
   // Função para lidar com o clique no ícone
   const handleIconClick = () => {
     console.log("Rotate");
@@ -80,7 +80,7 @@ const Card = ({
             </div>
           </div>
           <div>
-            <p className={styles.additionalText}>{children}</p>
+            {children}
           </div>
         </div>
       </div>

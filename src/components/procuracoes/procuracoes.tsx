@@ -37,7 +37,7 @@ const Procuracoes = () => {
     };
     fetchAndSetProcuracoes();
   }, []);
-  console.log("Procurações ativas ", procuracoesAtivas);
+  
   return (
     <div>
       <h2 className={styles.title}>Minhas procurações</h2>
@@ -48,6 +48,7 @@ const Procuracoes = () => {
         {procuracoesPendentes.length > 0 && (
           <div className={styles.contentContainer}>
             {procuracoesPendentes.map((procuracao, index) => (
+              
               <Card
                 key={index}
                 inscricao={procuracao.inscricao}
