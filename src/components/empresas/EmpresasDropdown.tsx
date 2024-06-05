@@ -5,6 +5,8 @@ import { memo, useState } from "react";
 // import Error from "../UI/Error/Error";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
+import Tabela from '../tabela/Tabela'
+import Button from "../button/Button";
 
 type Atividade =
   | "Alvará Transitório de Eventos"
@@ -98,24 +100,14 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <h3>Procuradores Cadastrados</h3>
         </div>
 
-        <div className={styles.gridContainer}>
-          <div className="gridHeader">Nome</div>
-          <div className="gridHeader">Período</div>
-          <div className="gridHeader">Atividades</div>
-          <div className="gridHeader">Status</div>
-          <div className="gridHeader"></div>
-
-          <div className={styles.gridItem}>Coluna 1</div>
-          <div className={styles.gridItem}>Coluna 2</div>
-          <div className={styles.gridItem}>Coluna 3</div>
-          <div className={styles.gridItem}>Coluna 4</div>
-          <div className={styles.gridItem}>Coluna 5</div>
-          <div className={styles.gridItem}>Coluna 1</div>
-          <div className={styles.gridItem}>Coluna 2</div>
-          <div className={styles.gridItem}>Coluna 3</div>
-          <div className={styles.gridItem}>Coluna 4</div>
-          <div className={styles.gridItem}>Coluna 5</div>
-        </div>
+       <Tabela />
+       <Button
+                p
+                backgroundColor="var(--secondary)"
+                // textColor="var(--error)"
+                border="1px solid var(--secondary)"
+                text="Cadastrar Procurador"
+              />
       </div>
     </div>
   );
