@@ -19,6 +19,8 @@
   padding-bottom: 20px;
   border: 1px solid var(--text);
   border-radius: 5px;
+  box-sizing: border-box; /* Inclui padding e borda nas dimensões do elemento */
+  overflow: hidden; /* Garante que o conteúdo não transborde */
 }
 
 .empresaDropdown:hover button > .menuIcon span,

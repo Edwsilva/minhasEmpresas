@@ -18,7 +18,7 @@ const Tabela = () => {
       
         {/* Linha de Dados */}
         <div>RICK GRIMES</div>
-        <div>30/11/2017 até 30/11/2050</div>
+        <div>30/11até 30/11/2050</div>
         <div>Alvará Transitório de Eventos, Licenciamento da Vigilância Sanitária, Rio Mais Fácil Negócios </div>
         <div>Aprovado</div>
         <div><IoRemoveCircle /></div>
