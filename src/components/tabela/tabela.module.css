@@ -4,7 +4,6 @@
   display: grid;
   grid-template-columns: 2.5fr 1.5fr 7fr 1.5fr 0.5fr;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .header,
@@ -16,13 +15,19 @@
 .linha > div {
   border: 1px solid rgb(230, 222, 222);
   padding: 8px;
-  box-sizing: border-box; /* Garante que padding e border sejam incluídos na largura total */
+  display: flex;
+  justify-content: center; /* Centraliza horizontalmente */
+  align-items: center; /* Centraliza verticalmente */
+  height: 100%; /* Ajuste conforme necessário */
 }
 
 .tabela div {
-  font-size: .9rem; /* Ajuste o tamanho conforme necessário */
+  font-size:.9rem;
 }
 
+.icon {
+    font-size: .9rem;
+}
 /* Media query para telas menores */
 @media (max-width: 1200px) {
   .tabela {
@@ -41,7 +46,10 @@
     grid-template-columns: 1.5fr 1fr 4fr 1fr 0.5fr;
   }
   .tabela div {
-    font-size: .7rem; /* Ajuste o tamanho conforme necessário */
+    font-size: .7rem;
+  }
+  .tabela div .icon {
+    font-size: .8rem;
   }
 }
 
@@ -50,15 +58,16 @@
     grid-template-columns: 1fr 1fr 3fr 1fr 0.5fr;
   }
   .tabela div {
-    font-size: .6rem; /* Ajuste o tamanho conforme necessário */
+    font-size: .6rem; 
   }
+
 }
 
 @media (max-width: 480px) {
   .tabela {
     grid-template-columns: 1fr 1fr 2fr 1fr 0.5fr;
   }
-  .tabela div {
-    font-size: .5rem; /* Ajuste o tamanho conforme necessário */
-  }
+  /* .tabela div .icon {
+    font-size: .7rem;
+  } */
 }

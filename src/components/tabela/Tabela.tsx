@@ -6,7 +6,6 @@ const Tabela = () => {
   return (
     <div className={styles.tabela}>
       <div className={styles.header}>
-      
         {/* Cabeçalho da Tabela */}
         <div>Nome</div>
         <div>Período</div>
@@ -15,17 +14,21 @@ const Tabela = () => {
         <div> </div>
       </div>
       <div className={styles.linha}>
-      
         {/* Linha de Dados */}
         <div>RICK GRIMES</div>
         <div>30/11até 30/11/2050</div>
-        <div>Alvará Transitório de Eventos, Licenciamento da Vigilância Sanitária, Rio Mais Fácil Negócios </div>
+        <div>
+          Alvará Transitório de Eventos, Licenciamento da Vigilância Sanitária,
+          Rio Mais Fácil Negócios{" "}
+        </div>
         <div>Aprovado</div>
-        <div><IoRemoveCircle /></div>
+        <div className={styles.icon}>
+          <IoRemoveCircle />
+        </div>
       </div>
-      {/* Adicione mais linhas conforme necessário */}
+     
     </div>
   );
 };
 
-export default Tabela
+export default Tabela;
