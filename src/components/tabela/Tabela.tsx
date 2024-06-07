@@ -21,7 +21,7 @@ const Tabela = () => {
           Alvará Transitório de Eventos, Licenciamento da Vigilância Sanitária,
           Rio Mais Fácil Negócios{" "}
         </div>
-        <div>Aprovado</div>
+        <div className={styles.status}>Aprovado</div>
         <div className={styles.icon}>
           <IoRemoveCircle />
         </div>

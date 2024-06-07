@@ -5,7 +5,7 @@ import { memo, useState } from "react";
 // import Error from "../UI/Error/Error";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
-import Tabela from '../tabela/Tabela'
+import Tabela from "../tabela/Tabela";
 import Button from "../button/Button";
 
 type Atividade =
@@ -100,14 +100,13 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <h3>Procuradores Cadastrados</h3>
         </div>
 
-       <Tabela />
-       <Button
-                p
-                backgroundColor="var(--secondary)"
-                // textColor="var(--error)"
-                border="1px solid var(--secondary)"
-                text="Cadastrar Procurador"
-              />
+        <Tabela />
+        <Button
+          backgroundColor="var(--secondary)"
+          // textColor="var(--error)"
+          border="1px solid var(--secondary)"
+          text="Cadastrar Procurador"
+        />
       </div>
     </div>
   );
