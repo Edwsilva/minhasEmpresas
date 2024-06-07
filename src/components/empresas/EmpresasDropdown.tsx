@@ -42,7 +42,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   dropdownVisible,
   toggle,
 }: Props) {
-  const [declaracaoHTML, setDeclaracaoHTML] = useState<string>("");
+
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
@@ -51,7 +51,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   };
 
   console.log("EmpresaDropdown i", i);
-  console.log("EmpresaDropdown data", data);
+  console.log("EmpresaDropdown data", data.procuradores);
   console.log("EmpresaDropdown dropdownVisible", dropdownVisible);
   console.log("EmpresaDropdown toggle", toggle);
 
@@ -89,18 +89,31 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
-          <h4>LINTEC - AGENCIAMENTO E REPRESENTAÇÕES LTDA</h4>
+          <h4>{data.nome}</h4>
         </div>
 
         <div className={styles.empresaCabecalho}>
           <CgFileDocument className={styles.icon} />
-          <h4>00.000.000/0000-00</h4>
+          <h4>{data.cnpj}</h4>
         </div>
         <div className={styles.tituloProcuradores}>
           <h3>Procuradores Cadastrados</h3>
         </div>
 
+        <div>
+          {data.procuradores?.map((procurador, index) => {
+            console.log("Procurador em tabela ", procurador)
+            return (
+           
+            <Tabela data={procurador}
+            key = {index}
+            />
+            
+          )})}
+
+          </div>
         <Tabela />
+
         <Button
           backgroundColor="var(--secondary)"
           // textColor="var(--error)"

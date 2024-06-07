@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./tabela.module.css"; // Importe o arquivo de estilos CSS para sua tabela
 import { IoRemoveCircle } from "react-icons/io5";
 
-const Tabela = () => {
+const Tabela = (procurador, index) => {
   return (
     <div className={styles.tabela}>
       <div className={styles.header}>

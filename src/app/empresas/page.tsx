@@ -37,17 +37,16 @@ const Empresas = () => {
       <Banner type="overlaySM" banner="bannerEmpresas"></Banner>
       <Container>
         <div>
-
-        {empresas?.map((empresa, i) => (
-          <EmpresaDropdown
-            data={empresa}
-            i={i}
-            toggle={toggleDropdown}
-            dropdownVisible={dropdownVisible[i]}
-          />
-        ))}
-      <Empresa />
-          </div>
+          {empresas?.map((empresa, i) => (
+            <EmpresaDropdown
+              data={empresa}
+              i={i}
+              toggle={toggleDropdown}
+              dropdownVisible={dropdownVisible[i]}
+            />
+          ))}
+          <Empresa />
+        </div>
       </Container>
     </div>
   );
