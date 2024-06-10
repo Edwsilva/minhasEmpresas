@@ -7,6 +7,7 @@ import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
 import Tabela from "../tabela/Tabela";
 import Button from "../button/Button";
+import Empresa from "./Empresa";
 
 type Atividade =
   | "Alvará Transitório de Eventos"
@@ -42,7 +43,6 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   dropdownVisible,
   toggle,
 }: Props) {
-
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
@@ -100,19 +100,14 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <h3>Procuradores Cadastrados</h3>
         </div>
 
-        <div>
-          {data.procuradores?.map((procurador, index) => {
-            console.log("Procurador em tabela ", procurador)
-            return (
-           
-            <Tabela data={procurador}
-            key = {index}
-            />
-            
-          )})}
-
+        {data?.procuradores && (
+          <div>
+            {data.procuradores.map((procurador, index) => {
+              console.log("Procurador em tabela ", procurador);
+              return <Tabela data={procurador} key={index} />;
+            })}
           </div>
-        <Tabela />
+        )}
 
         <Button
           backgroundColor="var(--secondary)"
@@ -121,6 +116,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           text="Cadastrar Procurador"
         />
       </div>
+     
     </div>
   );
 });

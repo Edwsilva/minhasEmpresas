@@ -31,8 +31,9 @@
 
 .status {
   color: var(--secondary)
- 
+
 }
+
 /* Media query para telas menores */
 @media (max-width: 1200px) {
   .tabela {
