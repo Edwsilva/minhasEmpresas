@@ -16,7 +16,7 @@ interface TabelaProps {
 
 const Tabela = ({ data }: TabelaProps) => {
 
-  const className = data.status === 'aprovado' ? styles.statusAprovado : styles.status;
+  const classStatus = data.status === 'aprovado' ? styles.statusAprovado : styles.status;
 
   return (
     <div className={styles.tabela}>
@@ -42,7 +42,7 @@ const Tabela = ({ data }: TabelaProps) => {
             </React.Fragment>
           ))} */}
         </div>
-        <div className={className}>{data.status}</div>
+        <div className={classStatus}>{data.status}</div>
         <div className={styles.icon}>
           <IoRemoveCircle />
         </div>
