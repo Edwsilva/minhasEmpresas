@@ -28,10 +28,12 @@
 .icon {
     font-size: .9rem;
 }
-
 .status {
-  color: var(--secondary)
+  color: var(----textDark);
+}
 
+.statusAprovado {
+  color: var(--secondary);
 }
 
 /* Media query para telas menores */
