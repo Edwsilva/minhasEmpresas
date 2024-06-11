@@ -1,16 +1,18 @@
 .direction {
-  border: 1px solid #ddd; /* Exemplo de borda */
+  border: 1px solid #595A5B; /* Exemplo de borda */
  
   border-radius: 8px; /* Exemplo de bordas arredondadas */
   background-color: #fff; /* Exemplo de cor de fundo */
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Exemplo de sombra */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+  /* Exemplo de sombra */
   flex-shrink: 0; /* Impede que o conteúdo diminua mais do que o tamanho especificado */
+  overflow: hidden;
 }
 
 .innerDiv {
   width: 100%;
   display: flex;
-  margin-bottom: 20px;
+  /* margin-bottom: 20px; */
 }
 
 .textTitular {
@@ -56,7 +58,7 @@
 .buttonContainer {
   display: flex;
   justify-content: space-between;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .buttonContainer > button{
@@ -65,7 +67,7 @@
 
 .buttonContainerAtivas{
   display: flex;
-  margin-top: 40px;
+  /* margin-top: 40px; */
 }
 
 .buttonContainerAtivas > button{
@@ -77,38 +79,47 @@
   perspective: 800px;
   width: 100%;
   height: 200px; 
-  overflow: auto;
 }
- 
+
+
 .cardFront,
 .cardBack {
   width: 100%;
   height: 100%;
-  padding: 10px;
- 
+  padding: 20px;
+  
   backface-visibility: hidden;
-  transition: all 0.3s;
-  border: 1px solid #595A5B;
+  transition: ease-in-out .5s;
+  /* border: 1px solid #595A5B; */
   border-radius: 8px; 
   /* display: flex; */
   /* align-items: center; */
   /* justify-content: center; */
   /* cursor: pointer; */
-  overflow-y: auto;
+  /* overflow-y: auto; */
   /* padding: 20px; */
   word-wrap: break-word;
 }
-.cardFront {
+
+.cardFront{
   position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background-color: #FFFFFF;
-  border: 2px solid #595A5B;
   transform: rotateY(0deg); /* Adicionado para garantir que a frente esteja visível inicialmente */
 }
 
-.cardBack {
-  /* width: 100%; */
+.cardFront ~ .cardBack{
+  overflow-y: hidden;
+}
+
+.cardBack{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   background-color:  #FFFFFF;
-  transform: rotateY(180deg)
+  transform: rotateY(180deg);
 }
 
 .isRotated .cardFront{
@@ -117,6 +128,10 @@
 
 .isRotated .cardBack{
   transform: rotateY(0);
+}
+
+.isRotated .cardBack > ul {
+  overflow-y: auto;
 }
 
 .icon-container {

@@ -37,33 +37,31 @@ const Procuracoes = () => {
     };
     fetchAndSetProcuracoes();
   }, []);
-  
+
   return (
     <div>
       <h2 className={styles.title}>Minhas procurações</h2>
       <div className={styles.container}>
         <h3 className={styles.title2}>
-          Pendentes: {`(${procuracoesPendentes.length})`}
+          Pendentes {`(${procuracoesPendentes.length})`}
         </h3>
         {procuracoesPendentes.length > 0 && (
           <div className={styles.contentContainer}>
             {procuracoesPendentes.map((procuracao, index) => (
-              
+
               <Card
-                key={index}
+                key={procuracao.id}
                 inscricao={procuracao.inscricao}
                 titular={procuracao.titular}
                 status={procuracao.status}
                 servico={procuracao.servico}
               >
-                <div>
+                <ul className={styles.atividadesList}>
                   {procuracao.atividades &&
-                    procuracao.atividades.map((atividades, index) => (
-                      <React.Fragment key={index}>
-                        <li className={styles.titleLi}>{atividades}</li>
-                      </React.Fragment>
+                    procuracao.atividades.map((atividade, index) => (
+                      <li key={index} className={styles.titleLi}>{atividade}</li>
                     ))}
-                </div>
+                </ul>
               </Card>
             ))}
           </div>
@@ -72,7 +70,7 @@ const Procuracoes = () => {
 
       <div className={styles.container}>
         <h3 className={styles.title2}>
-          Ativas: {`(${procuracoesAtivas.length})`}
+          Ativas {`(${procuracoesAtivas.length})`}
         </h3>
         {procuracoesAtivas.length > 0 && (
           <div className={styles.contentContainer}>

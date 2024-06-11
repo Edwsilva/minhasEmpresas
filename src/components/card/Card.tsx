@@ -79,9 +79,7 @@ const Card = ({
               <IoMdInformation className={styles.icon} />
             </div>
           </div>
-          <div>
-            {children}
-          </div>
+          {children}
         </div>
       </div>
     </div>

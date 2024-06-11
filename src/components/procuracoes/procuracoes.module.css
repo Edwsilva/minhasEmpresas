@@ -13,7 +13,7 @@
   
   .contentContainer {
     display: grid;
-    grid-template-columns: repeat(auto-fill,minmax(300px, 1fr)); /* Gera colunas automáticas de no mínimo 300px e ajusta-se ao espaço disponível */
+    grid-template-columns: repeat(auto-fit, 300px); /* Gera colunas automáticas de no mínimo 300px e ajusta-se ao espaço disponível */
     grid-gap: 20px; /* Espaçamento entre os cards */
   }
   
@@ -30,11 +30,17 @@
     font-weight: 500;
     color: var(--textDark)
   }
+
+  .atividadesList{
+    text-decoration: none;
+    list-style-position: inside;
+  }
+
   .titleLi {
     font-size: 0.9rem;
     line-height: 1.2rem;
-    color: var(--text)
-   
+    color: var(--text);
+    margin-bottom: 5px;
   }
   
   @media screen and (max-width: 1366px) {
