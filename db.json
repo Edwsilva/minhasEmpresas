@@ -123,7 +123,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "aprovado"
+          "status": "APROVADO"
         },
         {
           "nome": "Ricardo Coração de Leão",
@@ -133,7 +133,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "aprovado"
+          "status": "APROVADO"
         },
         {
           "nome": "Ricks on The Barbie",
@@ -143,7 +143,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "pendente"
+          "status": "PENDENTE"
         }
       ]
     },
@@ -162,7 +162,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "aprovado"
+          "status": "APROVADO"
         },
         {
           "nome": "Ricardo Coração de Leão",
@@ -172,7 +172,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "aprovado"
+          "status": "APROVADO"
         },
         {
           "nome": "Ricks on The Barbie",
@@ -182,7 +182,7 @@
             "Licenciamento da Vigilância Sanitária",
             "Rio Mais Fácil Negócios"
           ],
-          "status": "pendente"
+          "status": "PENDENTE"
         }
       ]
     }

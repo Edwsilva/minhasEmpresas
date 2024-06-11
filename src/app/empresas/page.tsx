@@ -34,8 +34,11 @@ const Empresas = () => {
 
   return (
     <div className={styles.main}>
-      <Banner type="overlaySM" banner="bannerEmpresas"></Banner>
+      <Banner type="overlaySM" banner="bannerEmpresas">
+        <h1>Minhas Empresas</h1>
+      </Banner>
       <Container>
+        <h2 className={styles.title}>Minhas procurações</h2>
         <div>
           {empresas?.map((empresa, i) => (
             <EmpresaDropdown
@@ -45,7 +48,7 @@ const Empresas = () => {
               dropdownVisible={dropdownVisible[i]}
             />
           ))}
-         <Empresa />
+          <Empresa />
         </div>
       </Container>
     </div>

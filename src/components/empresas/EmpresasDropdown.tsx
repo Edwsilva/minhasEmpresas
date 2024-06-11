@@ -67,13 +67,12 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
       >
         <div className={styles.empresaGroup}>
           <span>
-            <b>{data.nomeFantasia}</b>
+            <h3>{data.nomeFantasia.toLocaleUpperCase()}</h3>
           </span>
         </div>
         <button
-          className={`${styles.iconButton} ${
-            dropdownVisible ? styles.open : ""
-          }`}
+          className={`${styles.iconButton} ${dropdownVisible ? styles.open : ""
+            }`}
         >
           <div className={styles.menuIcon}>
             <span></span>
@@ -83,13 +82,12 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         </button>
       </div>
       <div
-        className={`${styles.empresaContainer} ${
-          dropdownVisible ? styles.empresaContainerVisible : ""
-        }`}
+        className={`${styles.empresaContainer} ${dropdownVisible ? styles.empresaContainerVisible : ""
+          }`}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
-          <h4>{data.nome}</h4>
+          <h4>{data.nome.toUpperCase()}</h4>
         </div>
 
         <div className={styles.empresaCabecalho}>
@@ -116,7 +114,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           text="Cadastrar Procurador"
         />
       </div>
-     
+
     </div>
   );
 });

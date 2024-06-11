@@ -16,11 +16,11 @@ interface TabelaProps {
 
 const Tabela = ({ data }: TabelaProps) => {
 
-  const classStatus = data.status === 'aprovado' ? styles.statusAprovado : styles.status;
+  const classStatus = data.status === 'APROVADO' ? styles.statusAprovado : styles.status;
 
   return (
     <div className={styles.tabela}>
-   
+
       <div className={styles.header}>
         {/* Cabeçalho da Tabela */}
         <div>Nome</div>
