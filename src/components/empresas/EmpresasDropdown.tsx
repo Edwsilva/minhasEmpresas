@@ -71,8 +71,9 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </span>
         </div>
         <button
-          className={`${styles.iconButton} ${dropdownVisible ? styles.open : ""
-            }`}
+          className={`${styles.iconButton} ${
+            dropdownVisible ? styles.open : ""
+          }`}
         >
           <div className={styles.menuIcon}>
             <span></span>
@@ -82,8 +83,9 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         </button>
       </div>
       <div
-        className={`${styles.empresaContainer} ${dropdownVisible ? styles.empresaContainerVisible : ""
-          }`}
+        className={`${styles.empresaContainer} ${
+          dropdownVisible ? styles.empresaContainerVisible : ""
+        }`}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
@@ -98,15 +100,26 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <h3>Procuradores Cadastrados</h3>
         </div>
 
-        {data?.procuradores && (
-          <div>
-            {data.procuradores.map((procurador, index) => {
-              console.log("Procurador em tabela ", procurador);
-              return <Tabela data={procurador} key={index} />;
-            })}
+        <div className={styles.tabela}>
+          <div className={styles.header}>
+            {/* Cabeçalho da Tabela */}
+            <div>Nome</div>
+            <div>Período</div>
+            <div>Atividade</div>
+            <div>Status</div>
+            <div> </div>
           </div>
-        )}
-
+          <div className={styles.header}>
+            {data?.procuradores && (
+              <>
+                {data.procuradores.map((procurador, index) => {
+                  console.log("Procurador em tabela ", procurador);
+                  return <Tabela data={procurador} key={index} />;
+                })}
+              </>
+            )}
+          </div>
+        </div>
         <Button
           backgroundColor="var(--secondary)"
           // textColor="var(--error)"
@@ -114,7 +127,6 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           text="Cadastrar Procurador"
         />
       </div>
-
     </div>
   );
 });

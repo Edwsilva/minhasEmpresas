@@ -19,17 +19,8 @@ const Tabela = ({ data }: TabelaProps) => {
   const classStatus = data.status === 'APROVADO' ? styles.statusAprovado : styles.status;
 
   return (
-    <div className={styles.tabela}>
-
-      <div className={styles.header}>
-        {/* Cabeçalho da Tabela */}
-        <div>Nome</div>
-        <div>Período</div>
-        <div>Atividade</div>
-        <div>Status</div>
-        <div> </div>
-      </div>
-      <div className={styles.linha}>
+   
+      <>
         {/* Linha de Dados */}
         <div>{data.nome}</div>
         <div>{data.periodo}</div>
@@ -46,8 +37,8 @@ const Tabela = ({ data }: TabelaProps) => {
         <div className={styles.icon}>
           <IoRemoveCircle />
         </div>
-      </div>
-    </div>
+      </>
+  
   );
 };
 
