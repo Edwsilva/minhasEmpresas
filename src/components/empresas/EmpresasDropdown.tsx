@@ -7,28 +7,7 @@ import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
 import Tabela from "../tabela/Tabela";
 import Button from "../button/Button";
-import Empresa from "./Empresa";
-
-type Atividade =
-  | "Alvará Transitório de Eventos"
-  | "Licenciamento da Vigilância Sanitária"
-  | "Rio Mais Fácil Negócios";
-
-interface Procurador {
-  nome: string;
-  periodo: string;
-  atividades: Atividade[];
-  status: "aprovado" | "pendente";
-}
-
-export interface Empresa {
-  id: number;
-  nome: string;
-  nomeFantasia: string;
-  representante: boolean;
-  cnpj: string;
-  procuradores: Procurador[];
-}
+import { Empresa } from "@/types";
 
 type Props = {
   data: Empresa;

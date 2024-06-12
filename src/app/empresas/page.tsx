@@ -3,9 +3,10 @@ import { fetchUrl } from "@/api/procuracao";
 import Banner from "@/components/banner/Banner";
 import Container from "@/components/container/Container";
 import EmpresaDropdown from "@/components/empresas/EmpresasDropdown";
-import Empresa from "@/components/empresas/Empresa";
+import FormEmpresa from "@/components/empresas/FormEmpresa";
 import { useCallback, useEffect, useState } from "react";
 import styles from "./empresas.module.css";
+import { Empresa } from "@/types";
 
 const Empresas = () => {
   const [empresas, setEmpresas] = useState<Empresa[]>();
@@ -48,7 +49,7 @@ const Empresas = () => {
               dropdownVisible={dropdownVisible[i]}
             />
           ))}
-          <Empresa />
+          <FormEmpresa />
         </div>
       </Container>
     </div>

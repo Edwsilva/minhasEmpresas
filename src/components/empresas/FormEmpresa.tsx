@@ -2,22 +2,30 @@ import styles from "./empresas.module.css";
 // import Button from "../button/Button";
 
 import Button from "../button/Button";
+import { ChangeEvent } from "react";
 
-const Empresa = () => {
+const FormEmpresa = () => {
+
+  const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
+    e.preventDefault();
+
+    console.log("Form Submitted");
+  }
+
   return (
-    <div className={styles.cadastrarEmpresa}>
-     <label className={styles.label}>Cadastrar Empresa</label>
+    <form className={styles.form} onSubmit={handleSubmit}>
+      <h3 className={styles.title2}>Cadastrar Empresa</h3>
 
-      <div className={styles.form}>
-        <div className={styles.textField}>
+      <div className={styles.textField}>
+        <div className={styles.inputContainer}>
           <label htmlFor="" className={styles.label}>
             CNPJ:
           </label>
           <input
+            className={styles.input}
             type="text"
             placeholder="00.000.000/0000-00"
             maxLength={13}
-            className={styles.input}
             value={''}
             onChange={(e) => { }}
           />
@@ -25,13 +33,13 @@ const Empresa = () => {
         <Button
           p
           backgroundColor="var(--secondary)"
-          // textColor="var(--error)"
           border="1px solid var(--secondary)"
           text="Cadastrar"
+          props={{ type: "submit" }}
         />
       </div>
-    </div>
+    </form>
   );
 };
 
-export default Empresa;
+export default FormEmpresa;

@@ -1,5 +1,5 @@
 "use client"
-import { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { ComponentPropsWithoutRef, Dispatch, ReactNode, SetStateAction, useState } from "react";
 import styles from "./button.module.css";
 
 type ButtonProps = {
@@ -11,9 +11,10 @@ type ButtonProps = {
     backgroundColor?: string;
     textColor?: string;
     border?: string
+    props?: ComponentPropsWithoutRef<"button">;
 }
 
-const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, border }: ButtonProps) => {
+const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, border, props }: ButtonProps) => {
 
     const [isHovered, setIsHovered] = useState(false);
 
@@ -34,7 +35,9 @@ const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, 
             style={{ backgroundColor: buttonBackgroundColor, color: buttonTextColor, border }}
             onMouseEnter={handleMouseEnter}
             onMouseLeave={handleMouseLeave}
-            onClick={fn}>{text}</button>
+            onClick={fn}
+            {...props}
+        >{text}</button>
     )
 }
 
