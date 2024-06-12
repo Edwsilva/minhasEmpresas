@@ -14,6 +14,7 @@ type Props = {
   i: number;
   dropdownVisible: boolean;
   toggle: (index: number) => void;
+  openModal: () => void;
 };
 
 const EmpresaDropdown = memo(function DeclaracaoDropdown({
@@ -21,6 +22,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   data,
   dropdownVisible,
   toggle,
+  openModal
 }: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
@@ -87,10 +89,8 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         )}
 
         <Button
-          backgroundColor="var(--secondary)"
-          // textColor="var(--error)"
-          border="1px solid var(--secondary)"
           text="Cadastrar Procurador"
+          fn={openModal}
         />
       </div>
 

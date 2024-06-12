@@ -52,21 +52,17 @@ const Card = ({
             <div className={styles.buttonContainer}>
               <Button
                 p
-                backgroundColor="var(--error)"
-                textColor="var(--error)"
-                border="1px solid var(--error)"
                 text="Recusar"
+                type="error"
               />
 
-              <Button p textColor="var(--secondary)" text="Aceitar" />
+              <Button p text="Aceitar" />
             </div>
           ) : (
             <div className={styles.buttonContainerAtivas}>
               <Button
                 p
-                backgroundColor="var(--error)"
-                textColor="var(--error)"
-                border="1px solid var(--error)"
+                type="error"
                 text="Cancelar"
               />
             </div>
