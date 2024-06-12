@@ -38,7 +38,7 @@ const Empresas = () => {
         <h1>Minhas Empresas</h1>
       </Banner>
       <Container>
-        <h2 className={styles.title}>Minhas procurações</h2>
+        <h2 className={styles.title}>Minhas Empresas</h2>
         <div>
           {empresas?.map((empresa, i) => (
             <EmpresaDropdown
