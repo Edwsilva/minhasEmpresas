@@ -180,16 +180,15 @@
   grid-template-columns: 2.5fr 1.5fr 7fr 1.5fr 0.5fr;
   width: 100%;
 }
-.header,
-.line {
+.header {
   display: contents; /* 'contents' usa as colunas definidas pelo contêiner pai */
 }
 
-.header > div,
-.line > div {
+.header > div {
   border: 1px solid rgb(230, 222, 222);
   padding: 8px;
   display: flex;
+
   justify-content: center; /* Centraliza horizontalmente */
   align-items: center; /* Centraliza verticalmente */
   height: 100%; /* Ajuste conforme necessário */

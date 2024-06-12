@@ -107,7 +107,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
             <div>Período</div>
             <div>Atividade</div>
             <div>Status</div>
-            <div> </div>
+            <div>Revogar</div>
           </div>
           <div className={styles.header}>
             {data?.procuradores && (
