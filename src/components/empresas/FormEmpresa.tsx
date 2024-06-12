@@ -1,15 +1,19 @@
+import { ChangeEvent, useState } from "react";
 import styles from "./empresas.module.css";
-// import Button from "../button/Button";
-
 import Button from "../button/Button";
-import { ChangeEvent } from "react";
 
 const FormEmpresa = () => {
+  const [textField, setTextField] = useState('');
+
+  const inputChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+    setTextField(e.target.value);
+  }
 
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();
 
     console.log("Form Submitted");
+    console.log(textField);
   }
 
   return (
@@ -26,8 +30,8 @@ const FormEmpresa = () => {
             type="text"
             placeholder="00.000.000/0000-00"
             maxLength={13}
-            value={''}
-            onChange={(e) => { }}
+            value={textField}
+            onChange={inputChangeHandler}
           />
         </div>
         <Button
