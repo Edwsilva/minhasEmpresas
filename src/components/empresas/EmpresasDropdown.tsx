@@ -22,7 +22,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   data,
   dropdownVisible,
   toggle,
-  openModal
+  openModal,
 }: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
@@ -52,8 +52,9 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </span>
         </div>
         <button
-          className={`${styles.iconButton} ${dropdownVisible ? styles.open : ""
-            }`}
+          className={`${styles.iconButton} ${
+            dropdownVisible ? styles.open : ""
+          }`}
         >
           <div className={styles.menuIcon}>
             <span></span>
@@ -63,8 +64,9 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         </button>
       </div>
       <div
-        className={`${styles.empresaContainer} ${dropdownVisible ? styles.empresaContainerVisible : ""
-          }`}
+        className={`${styles.empresaContainer} ${
+          dropdownVisible ? styles.empresaContainerVisible : ""
+        }`}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
@@ -88,12 +90,8 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </div>
         )}
 
-        <Button
-          text="Cadastrar Procurador"
-          fn={openModal}
-        />
+        <Button text="Cadastrar Procurador" fn={openModal} p />
       </div>
-
     </div>
   );
 });
