@@ -1,4 +1,3 @@
-"use client"
 import { ComponentPropsWithoutRef, Dispatch, ReactNode, SetStateAction, useState } from "react";
 import styles from "./button.module.css";
 
