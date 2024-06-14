@@ -112,10 +112,11 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  
 }
 
 .empresaContainerVisible {
-  border: 1px solid var(--error);
+  border: 5px solid var(--error);
   display: flex;
   justify-content: center;
   align-items: center;

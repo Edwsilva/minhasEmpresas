@@ -65,9 +65,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
       <div >
        
       <div ref={componentRef}
-        className={`${styles.empresaContainer} ${
-          dropdownVisible ? styles.empresaContainerVisible :  <></>
-        }`}
+        className={styles.empresaContainer}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
