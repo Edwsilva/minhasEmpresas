@@ -1,6 +1,6 @@
 import styles from "./empresas.module.css";
 // import Button from "../button/Button";
-import { memo, useState } from "react";
+import { memo, useState, useRef} from "react";
 // import Spinner from "../UI/Spinner/Spinner";
 // import Error from "../UI/Error/Error";
 import { MdOutlineBusinessCenter } from "react-icons/md";
@@ -27,8 +27,12 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
 
+  const componentRef = useRef(null);
+
   const handleDropdown = () => {
     toggle(i);
+    componentRef.current.style.display = componentRef.current.style.display === 'none' ? 'block' : 'none'
+   
   };
 
   return (
@@ -58,9 +62,11 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </div>
         </button>
       </div>
-      <div
+      <div >
+       
+      <div ref={componentRef}
         className={`${styles.empresaContainer} ${
-          dropdownVisible ? styles.empresaContainerVisible : ""
+          dropdownVisible ? styles.empresaContainerVisible :  <></>
         }`}
       >
         <div className={styles.empresaCabecalho}>
@@ -97,9 +103,10 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
             )}
           </div>
         </div>
-
+        <div className={styles.empresaContainer}>
         <Button text="Cadastrar Procurador" fn={openModal} p />
-
+         </div>     
+      </div>
       </div>
     </div>
   );

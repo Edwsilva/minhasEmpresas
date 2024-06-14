@@ -36,10 +36,11 @@ const Empresas = () => {
 
   const toggleDropdown = useCallback(
     (index: number) => {
-      console.log("TESTE")
+     
       setDropdownVisible((prevState) => {
         const updatedStates = [...prevState];
         updatedStates[index] = !updatedStates[index];
+        console.log('toggleDropdown em empresas.page ', updatedStates)
         return updatedStates;
       });
     },
