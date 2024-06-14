@@ -12,6 +12,7 @@ type Empresa = {
   representante: string;
   cnpj: string;
   procuradores: Procurador[];
+  atividadesDisponiveis: string[];
 };
 
 export type { Procurador, Empresa };

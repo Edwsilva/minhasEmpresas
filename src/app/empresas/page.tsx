@@ -24,7 +24,6 @@ const customStyles = {
     width: '80%',
     height: '75%',
     padding: 10,
-    // position: 'relative',
   }
 }
 
@@ -33,6 +32,7 @@ const Empresas = () => {
   const [dropdownVisible, setDropdownVisible] = useState<boolean[]>([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
   const [buttonModalOpen, setButtonModalOpen] = useState(false);
+  const [modalContent, setModalContent] = useState<string[]>([]);
 
   const toggleDropdown = useCallback(
     (index: number) => {
@@ -45,7 +45,8 @@ const Empresas = () => {
     [setDropdownVisible]
   );
 
-  const handleModalOpen = () => {
+  const handleModalOpen = (content: string[]) => {
+    setModalContent(content);
     setModalIsOpen(!modalIsOpen);
     setButtonModalOpen(!buttonModalOpen);
   }
@@ -68,6 +69,7 @@ const Empresas = () => {
         <h2 className={styles.title}>Minhas Empresas</h2>
         {empresas?.map((empresa, i) => (
           <EmpresaDropdown
+            key={i}
             data={empresa}
             i={i}
             toggle={toggleDropdown}
@@ -79,13 +81,14 @@ const Empresas = () => {
       </Container>
       <Button
         buttonModal
-        fn={handleModalOpen} hidden={buttonModalOpen ? false : true}
+        hidden={buttonModalOpen ? false : true}
         text={<IoClose
           size={25}
           style={{ display: 'flex', alignItems: 'center' }} />}
+        props={{ onClick: handleModalOpen.bind(this, modalContent) }}
       />
-      <Modal isOpen={modalIsOpen} style={customStyles}>
-        <ModalContent />
+      <Modal ariaHideApp={false} isOpen={modalIsOpen} style={customStyles}>
+        <ModalContent atividades={modalContent} />
       </Modal>
     </div>
   );

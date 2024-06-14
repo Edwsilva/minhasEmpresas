@@ -145,6 +145,13 @@
           ],
           "status": "PENDENTE"
         }
+      ],
+      "atividadesDisponiveis": [
+        "Alvará Transitório de Eventos",
+        "Rio Mais Fácil Negócios",
+        "Acesso do Tesouro Municipal",
+        "Licenciamento da Vigilância Sanitária",
+        "Multas de Trânsito"
       ]
     },
     {
@@ -184,6 +191,11 @@
           ],
           "status": "PENDENTE"
         }
+      ],
+      "atividadesDisponiveis": [
+        "Alvará Transitório de Eventos",
+        "Rio Mais Fácil Negócios",
+        "Licenciamento da Vigilância Sanitária"
       ]
     }
   ],

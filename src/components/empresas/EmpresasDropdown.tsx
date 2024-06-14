@@ -14,7 +14,7 @@ type Props = {
   i: number;
   dropdownVisible: boolean;
   toggle: (index: number) => void;
-  openModal: () => void;
+  openModal: (content: string[]) => void;
 };
 
 const EmpresaDropdown = memo(function DeclaracaoDropdown({
@@ -30,11 +30,6 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   const handleDropdown = () => {
     toggle(i);
   };
-
-  console.log("EmpresaDropdown i", i);
-  console.log("EmpresaDropdown data", data.procuradores);
-  console.log("EmpresaDropdown dropdownVisible", dropdownVisible);
-  console.log("EmpresaDropdown toggle", toggle);
 
   return (
     <div className={styles.empresa}>
@@ -52,9 +47,8 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </span>
         </div>
         <button
-          className={`${styles.iconButton} ${
-            dropdownVisible ? styles.open : ""
-          }`}
+          className={`${styles.iconButton} ${dropdownVisible ? styles.open : ""
+            }`}
         >
           <div className={styles.menuIcon}>
             <span></span>
@@ -64,9 +58,8 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         </button>
       </div>
       <div
-        className={`${styles.empresaContainer} ${
-          dropdownVisible ? styles.empresaContainerVisible : ""
-        }`}
+        className={`${styles.empresaContainer} ${dropdownVisible ? styles.empresaContainerVisible : ""
+          }`}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
@@ -90,7 +83,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </div>
         )}
 
-        <Button text="Cadastrar Procurador" fn={openModal} p />
+        <Button text="Cadastrar Procurador" fn={() => openModal(data.atividadesDisponiveis)} p />
       </div>
     </div>
   );
