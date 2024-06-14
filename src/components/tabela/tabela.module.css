@@ -39,10 +39,10 @@
   .tabela {
     grid-template-columns: 1fr 1fr 3fr 1fr 0.5fr;
   }
+  
   .tabela div {
     font-size: .6rem; 
   }
-
 }
 
 @media (max-width: 480px) {

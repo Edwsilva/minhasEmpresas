@@ -185,6 +185,7 @@
   display: grid;
   grid-template-columns: 2.5fr 1.5fr 7fr 1.5fr 0.5fr;
   width: 100%;
+  overflow-x: auto;
 }
 .header {
   display: contents; /* 'contents' usa as colunas definidas pelo contêiner pai */
