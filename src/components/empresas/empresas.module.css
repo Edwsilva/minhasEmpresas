@@ -23,46 +23,42 @@
   overflow: hidden; /* Garante que o conteúdo não transborde */
 }
 
-.cadastrarEmpresa {
-  padding: 30px;
+.title2{
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.form{
+  margin: 40px 0;
   display: flex;
   flex-direction: column;
-}
-
-
-.cadastrarEmpresa .form{
-  margin-top: 20px;
-  display: flex;
-  align-items: flex-end;
   gap: 20px;
-  width: fit-content;
-}
-.cadastrarEmpresa > .form > :last-child{
-  display: flex;
-  align-items: flex-end;
 }
 
 .textField{
   display: flex;
-  flex-direction: column;
+  align-items: flex-end;
   gap: 10px;
 }
+
 .label{
-  font-size: 0.8rem;
   font-weight: 600;
+  font-size: 1rem;
+}
+
+.inputContainer{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .input{
   width: 300px;
   padding: 9px;
   border: 1px solid var(--text);
+  border-radius: 5px;
   outline: none;
 }
-
-/* .empresaDropdown:hover,
-.empresaDropdownVisible:hover{
-  color: var(--secondary);
-} */
 
 .empresaDropdown:hover button > .menuIcon span,
 .empresaDropdownVisible:hover button > .menuIcon span{
@@ -210,7 +206,9 @@
     display: block;
   }
 
-  .signatureLine{
-    width: 200px;
+  .textField{
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }

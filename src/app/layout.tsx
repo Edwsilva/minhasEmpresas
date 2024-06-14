@@ -3,6 +3,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 // const inter = Inter({ subsets: ["latin"] });
 
@@ -19,17 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        {/* <div className="container"> */}
-          {/* <div className="headerbody"> */}
-
           <Navbar />
-          {/* <div className="children"> */}
-
+          <ToastContainer />
           {children}
-          {/* </div> */}
-          {/* </div> */}
           <Footer />
-        {/* </div> */}
       </body>
     </html>
   );

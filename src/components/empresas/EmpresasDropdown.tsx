@@ -7,34 +7,14 @@ import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
 import Tabela from "../tabela/Tabela";
 import Button from "../button/Button";
-import Empresa from "./Empresa";
-
-type Atividade =
-  | "Alvará Transitório de Eventos"
-  | "Licenciamento da Vigilância Sanitária"
-  | "Rio Mais Fácil Negócios";
-
-interface Procurador {
-  nome: string;
-  periodo: string;
-  atividades: Atividade[];
-  status: "aprovado" | "pendente";
-}
-
-export interface Empresa {
-  id: number;
-  nome: string;
-  nomeFantasia: string;
-  representante: boolean;
-  cnpj: string;
-  procuradores: Procurador[];
-}
+import { Empresa } from "@/types";
 
 type Props = {
   data: Empresa;
   i: number;
   dropdownVisible: boolean;
   toggle: (index: number) => void;
+  openModal: () => void;
 };
 
 const EmpresaDropdown = memo(function DeclaracaoDropdown({
@@ -42,6 +22,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   data,
   dropdownVisible,
   toggle,
+  openModal,
 }: Props) {
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [error, setError] = useState<boolean>(false);
@@ -49,11 +30,6 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   const handleDropdown = () => {
     toggle(i);
   };
-
-  console.log("EmpresaDropdown i", i);
-  console.log("EmpresaDropdown data", data.procuradores);
-  console.log("EmpresaDropdown dropdownVisible", dropdownVisible);
-  console.log("EmpresaDropdown toggle", toggle);
 
   return (
     <div className={styles.empresa}>
@@ -109,6 +85,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
             <div>Status</div>
             <div>Revogar</div>
           </div>
+
           <div className={styles.header}>
             {data?.procuradores && (
               <>
@@ -120,12 +97,9 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
             )}
           </div>
         </div>
-        <Button
-          backgroundColor="var(--secondary)"
-          // textColor="var(--error)"
-          border="1px solid var(--secondary)"
-          text="Cadastrar Procurador"
-        />
+
+        <Button text="Cadastrar Procurador" fn={openModal} p />
+
       </div>
     </div>
   );

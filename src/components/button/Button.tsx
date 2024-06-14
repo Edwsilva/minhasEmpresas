@@ -1,5 +1,4 @@
-"use client"
-import { Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { ComponentPropsWithoutRef, Dispatch, ReactNode, SetStateAction, useState } from "react";
 import styles from "./button.module.css";
 
 type ButtonProps = {
@@ -8,33 +7,17 @@ type ButtonProps = {
     p?: boolean;
     buttonModal?: boolean;
     hidden?: boolean;
-    backgroundColor?: string;
-    textColor?: string;
-    border?: string
+    type?: "default" | "error";
+    props?: ComponentPropsWithoutRef<"button">;
 }
 
-const Button = ({ text, fn, p, buttonModal, hidden, backgroundColor, textColor, border }: ButtonProps) => {
-
-    const [isHovered, setIsHovered] = useState(false);
-
-    const handleMouseEnter = () => {
-        setIsHovered(true);
-    };
-
-    const handleMouseLeave = () => {
-        setIsHovered(false)
-    };
-
-    const buttonBackgroundColor = isHovered ? "transparent" : backgroundColor;
-    const buttonTextColor = isHovered ? textColor : 'white';
-
+const Button = ({ text, fn, p, buttonModal, hidden, type, props }: ButtonProps) => {
     return (
         <button className={`${styles.button} ${hidden ? styles.hidden : ""} ${buttonModal ? styles.buttonModal : ""} 
-        ${p ? styles.p5 : styles.p10} `}
-            style={{ backgroundColor: buttonBackgroundColor, color: buttonTextColor, border }}
-            onMouseEnter={handleMouseEnter}
-            onMouseLeave={handleMouseLeave}
-            onClick={fn}>{text}</button>
+        ${p ? styles.p5 : styles.p10} ${type === "error" && styles.error}`}
+            onClick={fn}
+            {...props}
+        >{text}</button>
     )
 }
 
