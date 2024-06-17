@@ -40,6 +40,7 @@ const AboutPage = () => {
       <div className={styles.imgContainer}>
         <Image
           src="/about.png"
+          // arquivo next.config.mjs
           //  images: {
           //     remotePatterns: [
           //       {

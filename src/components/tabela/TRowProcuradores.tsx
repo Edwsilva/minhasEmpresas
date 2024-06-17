@@ -14,7 +14,7 @@ interface TabelaProps {
   data: ProcuradorData;
 }
 
-const Tabela = ({ data }: TabelaProps) => {
+const TRowProcuradores = ({ data }: TabelaProps) => {
 
   const classStatus = data.status === 'APROVADO' ? styles.statusAprovado : styles.status;
 
@@ -42,4 +42,4 @@ const Tabela = ({ data }: TabelaProps) => {
   );
 };
 
-export default Tabela;
+export default TRowProcuradores;
