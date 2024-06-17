@@ -5,9 +5,10 @@ import { memo, useState } from "react";
 // import Error from "../UI/Error/Error";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
-import Tabela from "../tabela/Tabela";
+import Tabela from "../tabela/TRow";
 import Button from "../button/Button";
 import { Empresa } from "@/types";
+import TRow from "../tabela/TRow";
 
 type Props = {
   data: Empresa;
@@ -70,17 +71,26 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <CgFileDocument className={styles.icon} />
           <h4>{data.cnpj}</h4>
         </div>
-        <div className={styles.tituloProcuradores}>
-          <h3>Procuradores Cadastrados</h3>
-        </div>
+        <h3 className={styles.tituloProcuradores}>Procuradores Cadastrados</h3>
 
         {data?.procuradores && (
-          <div>
-            {data.procuradores.map((procurador, index) => {
-              console.log("Procurador em tabela ", procurador);
-              return <Tabela data={procurador} key={index} />;
-            })}
-          </div>
+          <table className={styles.table}>
+            <thead>
+              <tr>
+                <th>Nome</th>
+                <th>Período</th>
+                <th>Atividade</th>
+                <th>Status</th>
+                <th>Remover</th>
+              </tr>
+            </thead>
+            <tbody>
+              {data.procuradores.map((procurador, index) => {
+                // console.log("Procurador em tabela ", procurador);
+                return <TRow data={procurador} key={index} />;
+              })}
+            </tbody>
+          </table>
         )}
 
         <Button text="Cadastrar Procurador" fn={() => openModal(data.atividadesDisponiveis)} p />

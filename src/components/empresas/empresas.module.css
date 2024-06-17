@@ -126,8 +126,31 @@
 .tituloProcuradores {
   display: flex;
   justify-content: center;
-  margin-top: 20px;
+  margin-top: 30px;
 }
+
+/*Table*/
+.table{
+  width: 90%;
+  border: 1px solid var(--text);
+  border-radius: 5px;
+  border-spacing: 0;
+  margin: 15px 0 40px 0;
+  /* border-collapse: collapse; */
+}
+
+.table thead th{
+  font-size: 1rem;
+  border-bottom: 1px solid var(--text);
+  border-right: 1px solid var(--text);
+  font-weight: 600;
+  padding: 10px;
+}
+
+.table thead th:last-child{
+  border-right: none;
+}
+/*Fim da Table*/
 
 .gridContainer {
   display: grid;
