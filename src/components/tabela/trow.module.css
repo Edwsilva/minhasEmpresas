@@ -64,6 +64,28 @@
   color: var(--error);
 }
 
+.modalContainer{
+  width: 70%;
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.modalContainer > h4{
+  text-align: center;
+}
+
+.modalButtonContainer{
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+}
+
 /* .icon:hover{
   color: var(--error);
 } */
