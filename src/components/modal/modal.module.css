@@ -119,3 +119,27 @@
   color: white;
   border-color: var(--secondary);
 }
+
+@media screen and (max-width: 480px){
+  .inputCPFContainer,
+  .inputPeriodoContainer > div,
+  .checkboxesContainer{
+    gap: 10px;
+  }
+
+  .title{
+    font-size: 1.3rem;
+  }
+  
+  .label{
+    font-size: .9rem;
+  }
+
+  .label2{
+    font-size: .8rem;
+  }
+
+  .labelContainer{
+    font-size: .7rem;
+  }
+}
