@@ -5,7 +5,7 @@ import { memo, useState } from "react";
 // import Error from "../UI/Error/Error";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
-import Tabela from "../tabela/Tabela";
+import TRowProcuradores from "../tabela/TRowProcuradores";
 import Button from "../button/Button";
 import Empresa from "./Empresa";
 
@@ -114,7 +114,7 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
               <>
                 {data.procuradores.map((procurador, index) => {
                   console.log("Procurador em tabela ", procurador);
-                  return <Tabela data={procurador} key={index} />;
+                  return <TRowProcuradores data={procurador} key={index} />;
                 })}
               </>
             )}
