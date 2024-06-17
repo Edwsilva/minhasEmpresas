@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, memo } from 'react';
 import { FaCheck } from 'react-icons/fa6';
 import styles from "./modal.module.css";
 
@@ -7,9 +7,8 @@ type Props = {
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
 }
 
-const Checkbox = ({ atividade, handleChange }: Props) => {
+const Checkbox = memo(function Checkbox({ atividade, handleChange }: Props) {
   return (
-
     <div className={styles.checkboxGroup}>
       <input
         type="checkbox"
@@ -27,6 +26,6 @@ const Checkbox = ({ atividade, handleChange }: Props) => {
       </label>
     </div>
   )
-}
+})
 
 export default Checkbox

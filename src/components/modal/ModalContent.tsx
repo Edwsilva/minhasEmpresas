@@ -1,4 +1,4 @@
-import React, { ChangeEvent, useReducer, useState } from "react";
+import React, { ChangeEvent, useCallback, useReducer } from "react";
 import styles from "./modal.module.css";
 import Button from "../button/Button";
 import Checkbox from "./Checkbox";
@@ -76,12 +76,12 @@ const reducer = (state: FormContent, action: Action): FormContent => {
 const ModalContent = ({ atividades }: Props) => {
   const [state, dispatch] = useReducer(reducer, initialFormState);
 
-  const handleRadioChanges = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleRadioChanges = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
       type: e.target.checked ? "Adicionar Radio" : "Remover Radio",
       payload: e.target.value
     })
-  }
+  }, [dispatch])
 
   const handleInputCPFChange = (e: ChangeEvent<HTMLInputElement>) => {
     dispatch({
@@ -90,7 +90,7 @@ const ModalContent = ({ atividades }: Props) => {
     })
   }
 
-  const handleInputPeriodoChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleInputPeriodoChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     if (e.target.id === "De") {
       dispatch({
         type: `InputDateDe`,
@@ -102,7 +102,7 @@ const ModalContent = ({ atividades }: Props) => {
         payload: e.target.value
       })
     }
-  }
+  }, [dispatch]);
 
   const handleSubmit = (e: ChangeEvent<HTMLFormElement>) => {
     e.preventDefault();

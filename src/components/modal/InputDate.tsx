@@ -1,4 +1,4 @@
-import React, { ChangeEvent } from 'react';
+import React, { ChangeEvent, memo } from 'react';
 import styles from "./modal.module.css";
 
 type Props = {
@@ -10,7 +10,7 @@ type Props = {
   htmlFor?: string;
 }
 
-const InputDate = ({ label, name, id, value, htmlFor, handleChange }: Props) => {
+const InputDate = memo(function InputDate({ label, name, id, value, htmlFor, handleChange }: Props) {
   return (
     <div className={styles.inputDate}>
       <label className={styles.label2} htmlFor={htmlFor}>
@@ -19,6 +19,6 @@ const InputDate = ({ label, name, id, value, htmlFor, handleChange }: Props) => 
       <input id={id} placeholder="dd/mm/aaaa" type="date" name={name} onChange={handleChange} value={value} />
     </div>
   )
-}
+})
 
 export default InputDate

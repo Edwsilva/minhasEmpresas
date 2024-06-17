@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { memo } from 'react';
 import styles from "./modal.module.css";
 
 type Props = {
@@ -6,12 +6,12 @@ type Props = {
   htmlFor?: string;
 }
 
-const Label = ({ children, htmlFor }: Props) => {
+const Label = memo(function Label({ children, htmlFor }: Props) {
   return (
     <label className={styles.label} htmlFor={htmlFor}>
       {children}
     </label>
   )
-}
+})
 
 export default Label
