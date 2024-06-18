@@ -130,13 +130,23 @@
 }
 
 /*Table*/
+.tableContainer{
+  width: 100%;
+  margin: 20px auto;
+  overflow-x: auto;
+}
+
+.tableContainer2{
+  width: 90%;
+  margin: 0 auto;
+}
+
 .table{
   width: 90%;
+  margin: 0 auto;
   border: 1px solid var(--text);
   border-radius: 5px;
   border-spacing: 0;
-  margin: 15px 0 40px 0;
-  /* border-collapse: collapse; */
 }
 
 .table thead th{
@@ -151,46 +161,6 @@
   border-right: none;
 }
 /*Fim da Table*/
-
-.gridContainer {
-  display: grid;
-  padding: 10px;
-  grid-template-columns: 2.5fr 1.5fr 3.5fr 1.5fr 0.5fr; /* Tamanhos variados para as colunas */
-  gap: 0; /* Sem espaço entre os itens */
-  border: 5px solid #1381f0;
-  border-radius: 10px;
-  margin: 20px auto; /* Centraliza a tabela horizontalmente */
-}
-
-.gridHeader, .gridItem {
-  padding: 20px;
-  text-align: center;
-  border: 1px solid #1381f0;
-}
-
-.gridHeader {
-  background-color: #4CAF50;
-  color: white;
-  font-weight: bold;
-  border-bottom: 2px solid #595A5B; 
-}
-.gridItem {
-  background-color: #fff;
-  color: #595A5B;
-  border-bottom: 1px solid #595A5B; /* Linha separadora entre as linhas do corpo */
-
-}
-
-.gridContainer > .gridHeader:nth-child(5n) {
-  border-right: none; /* Remove a borda direita do último cabeçalho */
-}
-
-.gridContainer > .gridItem:nth-child(5n) {
-  border-right: none; /* Remove a borda direita do último item em cada linha */
-}
-.gridText {
-  color: #000000;
-}
 
 @media screen and (max-width: 480px){
 

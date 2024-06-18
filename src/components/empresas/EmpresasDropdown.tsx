@@ -74,23 +74,24 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
         <h3 className={styles.tituloProcuradores}>Procuradores Cadastrados</h3>
 
         {data?.procuradores && (
-          <table className={styles.table}>
-            <thead>
-              <tr>
-                <th>Nome</th>
-                <th>Período</th>
-                <th>Atividade</th>
-                <th>Status</th>
-                <th>Remover</th>
-              </tr>
-            </thead>
-            <tbody>
-              {data.procuradores.map((procurador, index) => {
-                // console.log("Procurador em tabela ", procurador);
-                return <TRow data={procurador} key={index} />;
-              })}
-            </tbody>
-          </table>
+          <div className={styles.tableContainer}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Período</th>
+                  <th>Atividade</th>
+                  <th>Status</th>
+                  <th>Remover</th>
+                </tr>
+              </thead>
+              <tbody>
+                {data.procuradores.map((procurador, index) => {
+                  return <TRow data={procurador} key={index} />;
+                })}
+              </tbody>
+            </table>
+          </div>
         )}
 
         <Button text="Cadastrar Procurador" fn={() => openModal(data.atividadesDisponiveis)} p />
