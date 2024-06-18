@@ -16,7 +16,6 @@
 
 .empresa{
   margin: 10px 0;
-  padding-bottom: 20px;
   border: 1px solid var(--text);
   border-radius: 5px;
   box-sizing: border-box; /* Inclui padding e borda nas dimensões do elemento */
@@ -109,9 +108,14 @@
 }
 
 .empresaContainer {
-  display: flex;
+  display: none;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 20px;
+}
+
+.empresaContainerVisible{
+  display: flex;
 }
 
 .empresaCabecalho {

@@ -1,11 +1,7 @@
 import styles from "./empresas.module.css";
-// import Button from "../button/Button";
-import { memo, useState } from "react";
-// import Spinner from "../UI/Spinner/Spinner";
-// import Error from "../UI/Error/Error";
+import { memo } from "react";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
-import Tabela from "../tabela/TRow";
 import Button from "../button/Button";
 import { Empresa } from "@/types";
 import TRow from "../tabela/TRow";
@@ -25,8 +21,8 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   toggle,
   openModal,
 }: Props) {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<boolean>(false);
 
   const handleDropdown = () => {
     toggle(i);
