@@ -61,12 +61,12 @@ const Home = () => {
             <p className={styles.text}>
               Após ter adicionado um CNPJ ao seu perfil, poderá dar Procurações Virtuais
               para uma ou mais pessoas para serviços específicos e com prazos de validade
-              definidos.  Basta clicar no nome da empresa e seguir as instruções do site.
+              definidos. Basta clicar no nome da empresa e seguir as instruções do site.
             </p>
           </div>
         </div>
       </Container>
-      {!cookie && <Cookies />}
+      {!cookie && <Cookies name="minhas_empresas" value="Esse é o value do cookie minhas_empresas" />}
     </main>
   );
 };

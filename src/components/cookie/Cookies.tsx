@@ -4,13 +4,16 @@ import Button from '../button/Button';
 import { cookies } from 'next/headers';
 import { FaCookieBite } from "react-icons/fa";
 import Link from 'next/link';
+import { ResponseCookie } from 'next/dist/compiled/@edge-runtime/cookies';
 
-const Cookies = () => {
+type Props = ResponseCookie;
+
+const Cookies = ({ name, value }: Props) => {
   const setCookie = async () => {
     'use server'
     cookies().set({
-      name: 'minhas_empresas',
-      value: 'Esse é o value do cookie minhas_empresas',
+      name,
+      value,
     })
   }
 
