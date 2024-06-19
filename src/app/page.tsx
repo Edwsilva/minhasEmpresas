@@ -8,10 +8,11 @@ import Button from "@/components/button/Button";
 import Link from "next/link";
 import styles from "./page.module.css";
 import Container from "@/components/container/Container";
+import Cookies from "@/components/cookie/Cookies";
+import { cookies } from "next/headers";
 
 const Home = () => {
-  // throw new Error("error in home");
-  // return <div>Hello world!</div>
+  const cookie = cookies().has("minhas_empresas");
   return (
     <main className={styles.mainBanner}>
       <Container>
@@ -65,6 +66,7 @@ const Home = () => {
           </div>
         </div>
       </Container>
+      {!cookie && <Cookies />}
     </main>
   );
 };
