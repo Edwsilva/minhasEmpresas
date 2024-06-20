@@ -13,6 +13,18 @@ const formatCNPJ = (value: string): string => {
   return value;
 };
 
+const formatCPF = (value: string): string => {
+  // Remove all non-digit characters
+  value = value.replace(/\D/g, "");
+
+  // Format the CPF
+  value = value.replace(/^(\d{3})(\d)/, "$1.$2");
+  value = value.replace(/^(\d{3})\.(\d{3})(\d)/, "$1.$2.$3");
+  value = value.replace(/\.(\d{3})(\d)/, ".$1-$2");
+
+  return value;
+};
+
 const validateCNPJ = (cnpj: string): boolean => {
   cnpj = cnpj.replace(/\D/g, "");
 
@@ -61,4 +73,4 @@ const validateCNPJ = (cnpj: string): boolean => {
   return true;
 };
 
-export { formatCNPJ, validateCNPJ };
+export { formatCNPJ, formatCPF, validateCNPJ };
