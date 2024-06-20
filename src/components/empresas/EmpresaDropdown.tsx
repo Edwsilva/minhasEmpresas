@@ -1,20 +1,17 @@
 import styles from "./empresas.module.css";
-// import Button from "../button/Button";
-import { memo, useState, useRef} from "react";
-// import Spinner from "../UI/Spinner/Spinner";
-// import Error from "../UI/Error/Error";
+import { memo, useState, useRef } from "react";
 import { MdOutlineBusinessCenter } from "react-icons/md";
 import { CgFileDocument } from "react-icons/cg";
-import TRowProcuradores from "../tabela/TRowProcuradores";
 import Button from "../button/Button";
 import { Empresa } from "@/types";
+import TRow from "../tabela/TRow";
 
 type Props = {
   data: Empresa;
   i: number;
   dropdownVisible: boolean;
   toggle: (index: number) => void;
-  openModal: () => void;
+  openModal: (content: string[]) => void;
 };
 
 const EmpresaDropdown = memo(function DeclaracaoDropdown({
@@ -24,15 +21,13 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
   toggle,
   openModal,
 }: Props) {
-  const [isLoading, setIsLoading] = useState<boolean>(false);
-  const [error, setError] = useState<boolean>(false);
+  // const [isLoading, setIsLoading] = useState<boolean>(false);
+  // const [error, setError] = useState<boolean>(false);
 
   const componentRef = useRef(null);
 
   const handleDropdown = () => {
     toggle(i);
-    componentRef.current.style.display = componentRef.current.style.display === 'none' ? 'block' : 'none'
-   
   };
 
   return (
@@ -62,10 +57,10 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           </div>
         </button>
       </div>
-      <div >
-       
-      <div ref={componentRef}
-        className={styles.empresaContainer}
+      <div
+        className={`${styles.empresaContainer} ${
+          dropdownVisible ? styles.empresaContainerVisible : ""
+        }`}
       >
         <div className={styles.empresaCabecalho}>
           <MdOutlineBusinessCenter className={styles.icon} />
@@ -76,35 +71,34 @@ const EmpresaDropdown = memo(function DeclaracaoDropdown({
           <CgFileDocument className={styles.icon} />
           <h4>{data.cnpj}</h4>
         </div>
-        <div className={styles.tituloProcuradores}>
-          <h3>Procuradores Cadastrados</h3>
-        </div>
+        <h3 className={styles.tituloProcuradores}>Procuradores Cadastrados</h3>
 
-        <div className={styles.tabela}>
-          <div className={styles.header}>
-            {/* Cabeçalho da Tabela */}
-            <div>Nome</div>
-            <div>Período</div>
-            <div>Atividade</div>
-            <div>Status</div>
-            <div>Revogar</div>
-          </div>
-
-          <div className={styles.header}>
-            {data?.procuradores && (
-              <>
+        {data?.procuradores && (
+          <div className={styles.tableContainer}>
+            <table className={styles.table}>
+              <thead>
+                <tr>
+                  <th>Nome</th>
+                  <th>Período</th>
+                  <th>Atividade</th>
+                  <th>Status</th>
+                  <th>Remover</th>
+                </tr>
+              </thead>
+              <tbody>
                 {data.procuradores.map((procurador, index) => {
-                  console.log("Procurador em tabela ", procurador);
-                  return <TRowProcuradores data={procurador} key={index} />;
+                  return <TRow data={procurador} key={index} />;
                 })}
-              </>
-            )}
+              </tbody>
+            </table>
           </div>
-        </div>
-        <div className={styles.empresaContainer}>
-        <Button text="Cadastrar Procurador" fn={openModal} p />
-         </div>     
-      </div>
+        )}
+
+        <Button
+          text="Cadastrar Procurador"
+          fn={() => openModal(data.atividadesDisponiveis)}
+          p
+        />
       </div>
     </div>
   );

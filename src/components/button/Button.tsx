@@ -1,4 +1,4 @@
-import { ComponentPropsWithoutRef, Dispatch, ReactNode, SetStateAction, useState } from "react";
+import { ComponentPropsWithoutRef, Dispatch, ReactNode, SetStateAction } from "react";
 import styles from "./button.module.css";
 
 type ButtonProps = {
