@@ -8,17 +8,16 @@ import Button from "@/components/button/Button";
 import Link from "next/link";
 import styles from "./page.module.css";
 import Container from "@/components/container/Container";
-import Cookies from "@/components/cookie/Cookies";
-import { cookies } from "next/headers";
 
 const Home = () => {
-  const cookie = cookies().has("minhas_empresas");
   return (
     <main className={styles.mainBanner}>
       <Container>
         <Banner type="overlay" banner="banner">
           <h1 className={styles.bannerTitle}>Minhas Empresas</h1>
-          <p className={styles.bannerText}>Mantenha o controle da sua empresa</p>
+          <p className={styles.bannerText}>
+            Mantenha o controle da sua empresa
+          </p>
           <Link href="/empresas">
             <Button text="Cadastre sua Empresa" />
           </Link>
@@ -59,14 +58,14 @@ const Home = () => {
           <div className={styles.card}>
             <MdAssignmentAdd className={styles.icon} />
             <p className={styles.text}>
-              Após ter adicionado um CNPJ ao seu perfil, poderá dar Procurações Virtuais
-              para uma ou mais pessoas para serviços específicos e com prazos de validade
-              definidos. Basta clicar no nome da empresa e seguir as instruções do site.
+              Após ter adicionado um CNPJ ao seu perfil, poderá dar Procurações
+              Virtuais para uma ou mais pessoas para serviços específicos e com
+              prazos de validade definidos. Basta clicar no nome da empresa e
+              seguir as instruções do site.
             </p>
           </div>
         </div>
       </Container>
-      {!cookie && <Cookies name="minhas_empresas" value="Esse é o value do cookie minhas_empresas" />}
     </main>
   );
 };
