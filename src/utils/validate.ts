@@ -1,25 +1,37 @@
-import { launchToast } from "./toastify";
+import { launchToast } from './toastify';
 
 const formatCNPJ = (value: string): string => {
   // Remove all non-digit characters
-  value = value.replace(/\D/g, "");
+  value = value.replace(/\D/g, '');
 
   // Format the CNPJ
-  value = value.replace(/^(\d{2})(\d)/, "$1.$2");
-  value = value.replace(/^(\d{2})\.(\d{3})(\d)/, "$1.$2.$3");
-  value = value.replace(/\.(\d{3})(\d)/, ".$1/$2");
-  value = value.replace(/(\d{4})(\d)/, "$1-$2");
+  value = value.replace(/^(\d{2})(\d)/, '$1.$2');
+  value = value.replace(/^(\d{2})\.(\d{3})(\d)/, '$1.$2.$3');
+  value = value.replace(/\.(\d{3})(\d)/, '.$1/$2');
+  value = value.replace(/(\d{4})(\d)/, '$1-$2');
+
+  return value;
+};
+
+const formatCPF = (value: string): string => {
+  // Remove all non-digit characters
+  value = value.replace(/\D/g, '');
+
+  // Format the CPF
+  value = value.replace(/^(\d{3})(\d)/, '$1.$2');
+  value = value.replace(/^(\d{3})\.(\d{3})(\d)/, '$1.$2.$3');
+  value = value.replace(/\.(\d{3})(\d)/, '.$1-$2');
 
   return value;
 };
 
 const validateCNPJ = (cnpj: string): boolean => {
-  cnpj = cnpj.replace(/\D/g, "");
+  cnpj = cnpj.replace(/\D/g, '');
 
   if (cnpj.length !== 14) {
     launchToast({
-      msg: "Preencha o campo com um CNPJ completo",
-      type: "error",
+      msg: 'Preencha o campo com um CNPJ completo',
+      type: 'error',
     });
     return false;
   }
@@ -39,8 +51,8 @@ const validateCNPJ = (cnpj: string): boolean => {
   let result = sum % 11 < 2 ? 0 : 11 - (sum % 11);
   if (result != parseInt(digits.charAt(0))) {
     launchToast({
-      msg: "CNPJ inálido",
-      type: "error",
+      msg: 'CNPJ inálido',
+      type: 'error',
     });
     return false;
   }
@@ -61,4 +73,4 @@ const validateCNPJ = (cnpj: string): boolean => {
   return true;
 };
 
-export { formatCNPJ, validateCNPJ };
+export { formatCNPJ, formatCPF, validateCNPJ };

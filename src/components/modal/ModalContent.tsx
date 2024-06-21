@@ -4,6 +4,7 @@ import Button from "../button/Button";
 import Checkbox from "./Checkbox";
 import Label from "./Label";
 import InputDate from "./InputDate";
+import { formatCPF } from "@/utils/validate";
 
 
 type Props = {
@@ -84,9 +85,10 @@ const ModalContent = ({ atividades }: Props) => {
   }, [dispatch])
 
   const handleInputCPFChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const formatedValue = formatCPF(e.target.value);
     dispatch({
       type: 'InputCPF',
-      payload: e.target.value
+      payload: formatedValue
     })
   }
 
@@ -118,7 +120,7 @@ const ModalContent = ({ atividades }: Props) => {
       <div className={styles.inputCPFContainer}>
         <div className={styles.inputCPF}>
           <Label>CPF</Label>
-          <input placeholder="123.456.789-00" type="text" name="cpf" value={state.cpf} onChange={handleInputCPFChange} />
+          <input placeholder="123.456.789-00" type="text" name="cpf" maxLength={14} value={state.cpf} onChange={handleInputCPFChange} />
         </div>
         <Button p text={"OK"} props={{ style: { width: "60px" } }} />
       </div>
