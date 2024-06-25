@@ -1,13 +1,14 @@
 import styles from "./banner.module.css";
 import { ReactNode } from "react";
-import banner from "../../../public/images/banner.jpg"
-interface BannerProps{
+// import banner from "../../../../public/images/banner.jpg"
+
+interface BannerProps {
   type: "overlay" | "overlaySM";
-  banner: "banner" | "bannerProcurador" | "bannerEmpresas" ;
+  banner: "banner" | "bannerProcurador" | "bannerEmpresas";
   children: ReactNode;
 }
 
-const Banner = ({type, banner, children}: BannerProps) => {
+const Banner = ({ type, banner, children }: BannerProps) => {
 
   return (
     <div className={styles.container}>

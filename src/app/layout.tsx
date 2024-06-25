@@ -21,10 +21,10 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-          <Navbar />
-          <ToastContainer />
-          {children}
-          <Footer />
+        <Navbar />
+        <ToastContainer />
+        {children}
+        <Footer />
       </body>
     </html>
   );

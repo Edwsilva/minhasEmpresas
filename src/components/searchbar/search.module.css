@@ -1,0 +1,16 @@
+.searchBar{
+  margin: 10px auto;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+}
+
+.input{
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid var(--textDark);
+  outline: none;
+  flex: 1;
+}

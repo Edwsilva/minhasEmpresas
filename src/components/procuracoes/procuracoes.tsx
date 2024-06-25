@@ -1,10 +1,15 @@
-"use client";
-import { useEffect, useState } from "react";
+// "use client";
+// import { useEffect, useState } from "react";
 import React from "react";
 import styles from "./procuracoes.module.css";
 import Card from "@/components/card/Card";
 import Card1 from "@/components/card/Card1";
 import { fetchUrl } from "../../api/procuracao";
+
+type Props = {
+  query: string;
+  currentPage: string;
+}
 interface Procuracao {
   id: string;
   titular: string;
@@ -19,24 +24,23 @@ async function fetchProcuracoes() {
   return data;
 }
 
-const Procuracoes = () => {
-  const [procuracoes, setProcuracoes] = useState<Procuracao[]>([]);
+const Procuracoes = async ({ query, currentPage }: Props) => {
+  // const [procuracoes, setProcuracoes] = useState<Procuracao[]>([]);
 
-  // Separar as procurações em ativas e pendentes
-  const procuracoesAtivas = procuracoes.filter(
-    (procuracao) => procuracao.status !== "1"
-  );
+  const procuracoes: Procuracao[] = await fetchProcuracoes();
+
+  const procuracoesAtivas = query !== "" ?
+    procuracoes.filter(
+      (procuracao) => procuracao.status !== "1" && procuracao.titular.includes(query)
+    )
+    :
+    procuracoes.filter(
+      (procuracao) => procuracao.status !== "1"
+    );
+
   const procuracoesPendentes = procuracoes.filter(
     (procuracao) => procuracao.status === "1"
   );
-
-  useEffect(() => {
-    const fetchAndSetProcuracoes = async () => {
-      const response = await fetchProcuracoes();
-      setProcuracoes(response);
-    };
-    fetchAndSetProcuracoes();
-  }, []);
 
   return (
     <div>
