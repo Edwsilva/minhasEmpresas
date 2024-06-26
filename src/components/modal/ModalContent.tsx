@@ -136,9 +136,9 @@ const ModalContent = ({ atividades }: Props) => {
             placeholder="123.456.789-00"
             type="text"
             name="cpf"
+            maxLength={14}
             value={state.cpf}
             onChange={handleInputCPFChange}
-            maxLength={14}
           />
         </div>
         <Button p text={"OK"} props={{ style: { width: "60px" } }} />
