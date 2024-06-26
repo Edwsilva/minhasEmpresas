@@ -14,3 +14,9 @@
   outline: none;
   flex: 1;
 }
+
+.searchBar > select{
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}

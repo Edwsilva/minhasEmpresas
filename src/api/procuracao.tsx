@@ -2,7 +2,7 @@ import { Procurador } from "@/types";
 import axios from "axios";
 // import { load } from "cheerio";
 
-type Path = 'empresas' | 'procuracoes';
+type Path = "empresas" | "procuracoes";
 
 const fetchUrl = async (path: Path) => {
   const url = `http://localhost:3001/${path}`;
@@ -12,9 +12,8 @@ const fetchUrl = async (path: Path) => {
 
     if (response.status === 200) {
       const html = response.data;
-      console.log("####", html)
-      return html
-
+      // console.log("####", html)
+      return html;
     }
   } catch (error) {
     return { success: false, href: "Falha ao buscar link do PDF." };

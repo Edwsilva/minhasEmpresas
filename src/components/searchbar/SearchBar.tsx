@@ -1,39 +1,42 @@
-'use client'
-import styles from './search.module.css';
-import { IoSearch } from 'react-icons/io5';
-import { usePathname, useSearchParams, useRouter } from 'next/navigation';
+"use client";
+import styles from "./search.module.css";
+import { IoSearch } from "react-icons/io5";
 
-const SearchBar = () => {
-  const searchParams = useSearchParams();
-  const pathname = usePathname();
-  const { replace } = useRouter();
-  const handleSearch = (term: string) => {
-    console.log(`Searching...${term}`);
-    const params = new URLSearchParams(searchParams);
-    if (term) {
-      params.set('procuracoes', term);
-    } else {
-      params.delete('procuracoes');
-    }
-    replace(`${pathname}?${params.toString()}`);
-  }
+type Props = {
+  handleFilterTerm: (prop: string) => void;
+  handleFilterType: (prop: string) => void;
+};
 
+const SearchBar = ({ handleFilterTerm, handleFilterType }: Props) => {
   return (
     <div className={styles.searchBar}>
+      {/* <div> */}
       <input
-        placeholder='Pesquisar'
+        placeholder="Pesquisar"
         type="text"
         name="inputPesquisar"
         id="inputPesquisar"
         className={styles.input}
         onChange={(e) => {
-          handleSearch(e.target.value);
+          handleFilterTerm(e.target.value);
         }}
-        defaultValue={searchParams.get('procuracoes')?.toString()}
       />
+      <select
+        name=""
+        id=""
+        onChange={(e) => {
+          handleFilterType(e.target.value);
+        }}
+      >
+        <option value="Pendentes">Pendentes</option>
+        <option value="Ativas">Ativas</option>
+      </select>
       <IoSearch size={30} />
+      {/* </div> */}
+      {/* <div> */}
+      {/* </div> */}
     </div>
-  )
-}
+  );
+};
 
-export default SearchBar
+export default SearchBar;
